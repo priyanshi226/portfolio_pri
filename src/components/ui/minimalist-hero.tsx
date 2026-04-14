@@ -31,7 +31,7 @@ const NavLink = ({
 }) => (
   <a
     href={href}
-    className="text-sm font-medium tracking-widest text-foreground/60 transition-colors hover:text-foreground"
+    className="text-[11px] uppercase tracking-[0.2em] text-foreground/55 transition-colors duration-300 hover:text-foreground"
   >
     {children}
   </a>
@@ -40,11 +40,11 @@ const NavLink = ({
 const SocialIcon = ({ href, icon: Icon }: { href: string; icon: LucideIcon }) => (
   <a
     href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-foreground/60 transition-colors hover:text-foreground"
+    target={href.startsWith('#') ? undefined : '_blank'}
+    rel={href.startsWith('#') ? undefined : 'noopener noreferrer'}
+    className="text-foreground/55 transition-colors duration-300 hover:text-foreground"
   >
-    <Icon className="h-5 w-5" />
+    <Icon className="h-[18px] w-[18px]" />
   </a>
 )
 
@@ -66,124 +66,101 @@ export const MinimalistHero = ({
     <motion.div
       style={rootStyle}
       className={cn(
-        'relative flex h-screen w-full flex-col items-center justify-between overflow-hidden bg-background pl-4 pr-8 py-8 font-sans md:pl-8 md:pr-12 md:py-12',
+        'relative flex min-h-screen w-full flex-col justify-between overflow-hidden pb-8 pt-8 md:pb-10 md:pt-10',
         className,
       )}
     >
-      <header className="z-30 flex w-full max-w-7xl items-center justify-between pl-8 md:pl-12">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_8%,rgba(187,161,129,0.14),transparent_40%),radial-gradient(circle_at_8%_18%,rgba(95,124,164,0.12),transparent_48%)]" />
+      </div>
+
+      <header className="section-shell z-30 flex items-center justify-between">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-xl font-bold tracking-wider"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          className="text-sm tracking-[0.32em] text-foreground/82"
         >
           {logoText}
         </motion.div>
-        <div className="hidden items-center space-x-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <NavLink key={link.label} href={link.href}>
               {link.label}
             </NavLink>
           ))}
-        </div>
-        <motion.button
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col space-y-1.5 md:hidden"
-          aria-label="Open menu"
-        >
-          <span className="block h-0.5 w-6 bg-foreground"></span>
-          <span className="block h-0.5 w-6 bg-foreground"></span>
-          <span className="block h-0.5 w-5 bg-foreground"></span>
-        </motion.button>
+        </nav>
       </header>
 
-      <div className="relative w-full flex-grow flex flex-col md:flex-row items-center md:-mt-12">
-        <motion.div
-          style={textSectionStyle}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="z-20 mt-6 mb-2 flex w-full justify-end px-6 text-right md:hidden"
-        >
-          <div className="max-w-lg">
-            <h1 className="text-5xl font-extrabold leading-tight text-foreground sm:text-6xl">
-              {overlayText.part1}{' '}
-              <span className="text-yellow-400">{overlayText.part2}</span>
-            </h1>
-            <p className="mt-5 text-lg leading-relaxed text-foreground/75">
-              {mainText}
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Image + circle */}
+      <div className="section-shell relative z-20 grid flex-1 items-center gap-10 pb-6 pt-10 md:gap-12 md:py-14 lg:grid-cols-[0.95fr_1.05fr]">
         <motion.div
           style={imageSectionStyle}
-          className="relative -mt-28 md:mt-2 flex w-full flex-1 items-end md:w-auto md:flex-none md:items-center justify-center shrink-0 h-[64vh] md:h-auto md:ml-[100px] lg:ml-[160px]"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          className="relative mx-auto flex w-full max-w-md items-end justify-center lg:max-w-xl"
         >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="pointer-events-none absolute inset-0 z-0 m-auto h-[320px] w-[320px] -translate-y-24 rounded-full bg-yellow-400 md:h-[380px] md:w-[380px] md:translate-y-0 lg:h-[480px] lg:w-[480px]"
-          ></motion.div>
-          <motion.img
+          <div className="absolute -bottom-10 left-8 right-8 top-10 rounded-[44px] border border-foreground/10 bg-[linear-gradient(180deg,rgba(24,31,45,0.35),rgba(10,13,20,0.74))] blur-[0.3px]" />
+          <div className="absolute -bottom-5 left-[22%] h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(186,165,137,0.3),rgba(186,165,137,0)_72%)]" />
+          <img
             src={imageSrc}
             alt={imageAlt}
-            className="relative z-10 h-auto w-[96vw] max-w-[470px] -translate-y-8 md:w-[450px] md:max-w-none md:translate-y-0 lg:w-[550px] object-cover"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
-            onError={(e) => {
-              const target = e.target as HTMLImageElement
-              target.onerror = null
-              target.src =
-                'https://placehold.co/400x600/eab308/ffffff?text=Image+Not+Found'
-            }}
+            className="relative h-auto w-full max-w-[440px] object-cover"
           />
+        </motion.div>
+
+        <motion.div
+          style={textSectionStyle}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+          className="mx-auto w-full max-w-xl text-left lg:ml-auto lg:mr-0"
+        >
+          <h1 className="text-balance text-[2.35rem] font-medium leading-[1.06] text-foreground sm:text-5xl md:text-6xl lg:text-[4.35rem]">
+            {overlayText.part1}{' '}
+            <span className="highlight-phrase text-[1.07em]">{overlayText.part2}</span>
+          </h1>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground/72 sm:text-lg md:mt-6">
+            {mainText}
+          </p>
+          <p className="mt-5 max-w-lg text-sm leading-relaxed text-foreground/54 sm:mt-6 sm:text-[15px]">
+            Product-focused engineer shipping{' '}
+            <span className="highlight-phrase">scalable and production-ready</span>{' '}
+            systems with polished interfaces and strong backend reliability.
+          </p>
         </motion.div>
       </div>
 
-      <motion.div
-        style={textSectionStyle}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-        className="z-20 hidden md:absolute md:right-32 md:top-1/3 md:flex md:w-[40vw] md:-translate-y-1/2 md:justify-end lg:right-40 lg:w-[36vw] xl:w-[34vw]"
-      >
-        <div className="max-w-xl text-right">
-          <h1 className="text-6xl font-extrabold leading-tight text-foreground lg:text-7xl xl:text-8xl">
-            {overlayText.part1}{' '}
-            <span className="text-yellow-400">{overlayText.part2}</span>
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-foreground/75 lg:text-xl">
-            {mainText}
-          </p>
-        </div>
-      </motion.div>
-
-      <footer className="z-30 flex w-full max-w-7xl items-center justify-between pl-8 md:pl-12">
+      <footer className="section-shell z-30 flex items-center justify-between border-t border-foreground/10 pt-5">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.2 }}
-          className="flex items-center space-x-4"
+          transition={{ duration: 0.45, delay: 0.6 }}
+          className="flex items-center gap-4"
         >
           {socialLinks.map((link, index) => (
             <SocialIcon key={index} href={link.href} icon={link.icon} />
           ))}
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
-          className="text-sm font-medium text-foreground/80"
+          transition={{ duration: 0.45, delay: 0.7 }}
+          className="text-xs uppercase tracking-[0.16em] text-foreground/55"
         >
           {locationText}
         </motion.div>
       </footer>
+
+      <motion.div
+        style={textSectionStyle}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        className="pointer-events-none absolute inset-0 -z-10"
+      >
+        <div className="absolute bottom-[9%] left-[45%] h-[24rem] w-[24rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(95,124,164,0.14),transparent_65%)]" />
+      </motion.div>
     </motion.div>
   )
 }
