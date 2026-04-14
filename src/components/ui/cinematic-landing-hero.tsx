@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
 }
 
 const INJECTED_STYLES = `
-  .gsap-reveal { visibility: hidden; }
+  .gsap-reveal { visibility: visible; }
 
   .film-grain {
       position: absolute; inset: 0; width: 100%; height: 100%;
@@ -419,7 +419,7 @@ export function CinematicHero({
 
                     <div className="relative flex h-full w-full items-center justify-center">
                       <img
-                        src="/phone_img.jpeg"
+                        src="phone_img.jpeg"
                         alt="Phone screen"
                         className="h-full w-full object-cover rounded-[2.3rem]"
                       />

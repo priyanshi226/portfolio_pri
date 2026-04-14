@@ -10,7 +10,7 @@ if (typeof window !== "undefined") {
 }
 
 const INJECTED_STYLES = `
-  .gsap-reveal { visibility: hidden; }
+  .gsap-reveal { visibility: visible; }
 
   .film-grain {
       position: absolute; inset: 0; width: 100%; height: 100%;
@@ -205,7 +205,7 @@ export function LaptopHero({
                     {/* Laptop content - image */}
                     <div className="relative flex h-full w-full items-center justify-center">
                       <img
-                        src="/desktop_img.jpeg"
+                        src="desktop_img.jpeg"
                         alt="Pratinidhi AI Dashboard"
                         className="h-full w-full object-cover"
                       />
