@@ -429,16 +429,16 @@ export function CinematicHero({
 
                 {/* Floating Cards - Positioned outside phone mockup */}
                 <div className="floating-badge floating-ui-badge absolute top-8 -left-24 lg:top-8 lg:-left-24 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
-                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">SAT Module</p>
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">SAT Exam</p>
                   <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
-                    Developed features for SAT preparation platform. Implemented mock tests, performance tracking, and analytics with focus on scalable UI and real-time data handling.
+                    Score Predictor with exam-aware question assembly, pass-probability computation, and Full-Length Test module with blueprint-driven mock generation, randomized ordering, and score and topic breakdown.
                   </p>
                 </div>
 
                 <div className="floating-badge floating-ui-badge absolute bottom-8 -right-12 lg:bottom-8 lg:-right-12 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
-                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">NISM Module</p>
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">NISM Exam</p>
                   <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
-                    Built and adapted system for finance-based certification exams. Designed mock test flows, dashboard integration, and ensured alignment with exam-specific requirements.
+                    AI Tutor with dynamic prompt orchestration, RAG retrieval via LangChain, FAISS, and OpenAI embeddings, and Analytics pipeline with strength and weakness detection and personalized performance insights.
                   </p>
                 </div>
               </div>

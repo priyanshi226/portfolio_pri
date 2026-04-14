@@ -215,16 +215,16 @@ export function LaptopHero({
 
                 {/* Floating Cards */}
                 <div className="floating-badge floating-ui-badge absolute top-8 -left-12 lg:top-8 lg:-left-6 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
-                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">Agent Architecture</p>
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">CRM Dashboard</p>
                   <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
-                    Designed intelligent agent pipelines with guardrails, evaluations, and fallback paths for predictable behavior.
+                    Built a web dashboard for managing conversation pipelines and CRM stages using React.js with component-level state management, controlled form validation, and a unified REST API integration layer.
                   </p>
                 </div>
 
                 <div className="floating-badge floating-ui-badge absolute bottom-8 -right-12 lg:bottom-8 lg:-right-12 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
-                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">Real-World Deployment</p>
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">Backend Architecture</p>
                   <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
-                    Built embedding UI, feedback collection, and success metrics (handoff rate, resolution time, quality checks).
+                    Modular backend following controllers/services/repositories pattern, covering intake, qualification, routing, and lifecycle tracking. Automation workflow triggers and background job hooks with structured logging for production observability.
                   </p>
                 </div>
               </div>

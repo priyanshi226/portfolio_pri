@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils'
 interface MinimalistHeroProps {
   logoText: string
   navLinks: { label: string; href: string }[]
+  resumeHref?: string
   mainText: string
   imageSrc: string
   imageAlt: string
@@ -51,6 +52,7 @@ const SocialIcon = ({ href, icon: Icon }: { href: string; icon: LucideIcon }) =>
 export const MinimalistHero = ({
   logoText,
   navLinks,
+  resumeHref,
   mainText,
   imageSrc,
   imageAlt,
@@ -85,6 +87,15 @@ export const MinimalistHero = ({
               {link.label}
             </NavLink>
           ))}
+          {resumeHref && (
+            <a
+              href={resumeHref}
+              download
+              className="rounded-full border border-foreground/30 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-foreground/80 transition-colors hover:border-foreground/60 hover:text-foreground"
+            >
+              Resume
+            </a>
+          )}
         </div>
         <motion.button
           initial={{ opacity: 0, x: 20 }}
