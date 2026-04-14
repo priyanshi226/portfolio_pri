@@ -241,15 +241,8 @@ export function CinematicHero({
     const isMobile = window.innerWidth < 768;
 
     const ctx = gsap.context(() => {
-      gsap.set(".text-track", {
-        autoAlpha: 0,
-        y: 60,
-        scale: 0.85,
-        filter: "blur(20px)",
-        rotationX: -20,
-      });
-      gsap.set(".text-days", { autoAlpha: 1, clipPath: "inset(0 100% 0 0)" });
-      gsap.set(".main-card", { y: window.innerHeight + 200, autoAlpha: 1 });
+      // Initialize - phone visible with animation ready
+      gsap.set(".main-card", { y: 0, autoAlpha: 1 });
       gsap.set(
         [
           ".card-left-text",
@@ -262,28 +255,11 @@ export function CinematicHero({
       );
       gsap.set(".cta-wrapper", { autoAlpha: 0, scale: 0.8, filter: "blur(30px)" });
 
-      const introTl = gsap.timeline({ delay: 0.3 });
-      introTl
-        .to(".text-track", {
-          duration: 1.8,
-          autoAlpha: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          rotationX: 0,
-          ease: "expo.out",
-        })
-        .to(
-          ".text-days",
-          { duration: 1.4, clipPath: "inset(0 0% 0 0)", ease: "power4.inOut" },
-          "-=1.0",
-        );
-
       const scrollTl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=7000",
+          end: "+=5000",
           pin: true,
           scrub: 1,
           anticipatePin: 1,
@@ -291,30 +267,11 @@ export function CinematicHero({
       });
 
       scrollTl
-        .to(
-          [".hero-text-wrapper", ".bg-grid-theme"],
-          {
-            scale: 1.15,
-            filter: "blur(20px)",
-            opacity: 0.2,
-            ease: "power2.inOut",
-            duration: 2,
-          },
-          0,
-        )
-        .to(".main-card", { y: 0, ease: "power3.inOut", duration: 2 }, 0)
-        .to(".main-card", {
-          width: "100%",
-          height: "100%",
-          borderRadius: "0px",
-          ease: "power3.inOut",
-          duration: 1.5,
-        })
         .fromTo(
           ".mockup-scroll-wrapper",
           { y: 300, z: -500, rotationX: 50, rotationY: -30, autoAlpha: 0, scale: 0.6 },
           { y: 0, z: 0, rotationX: 0, rotationY: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 2.5 },
-          "-=0.8",
+          0,
         )
         .fromTo(
           ".phone-widget",
@@ -342,10 +299,9 @@ export function CinematicHero({
           { x: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 1.5 },
           "<",
         )
-        .to({}, { duration: 2.5 })
-        .set(".hero-text-wrapper", { autoAlpha: 0 })
+        .to({}, { duration: 2 })
         .set(".cta-wrapper", { autoAlpha: 1 })
-        .to({}, { duration: 1.5 })
+        .to({}, { duration: 1 })
         .to([".mockup-scroll-wrapper", ".floating-badge", ".card-left-text", ".card-right-text"], {
           scale: 0.9,
           y: -40,
@@ -366,8 +322,7 @@ export function CinematicHero({
           },
           "pullback",
         )
-        .to(".cta-wrapper", { scale: 1, filter: "blur(0px)", ease: "expo.inOut", duration: 1.8 }, "pullback")
-        .to(".main-card", { y: -window.innerHeight - 300, ease: "power3.in", duration: 1.5 });
+        .to(".cta-wrapper", { scale: 1, filter: "blur(0px)", ease: "expo.inOut", duration: 1.8 }, "pullback");
     }, containerRef);
 
     return () => ctx.revert();
@@ -386,15 +341,6 @@ export function CinematicHero({
       <style dangerouslySetInnerHTML={{ __html: INJECTED_STYLES }} />
       <div className="film-grain" aria-hidden="true" />
       <div className="bg-grid-theme pointer-events-none absolute inset-0 z-0 opacity-50" aria-hidden="true" />
-
-      <div className="hero-text-wrapper absolute z-10 flex w-screen transform-style-3d flex-col items-center justify-center px-4 text-center will-change-transform">
-        <h1 className="text-track gsap-reveal text-3d-matte mb-2 text-5xl font-bold tracking-tight md:text-7xl lg:text-[6rem]">
-          {tagline1}
-        </h1>
-        <h1 className="text-days gsap-reveal text-silver-matte text-5xl font-extrabold tracking-tighter md:text-7xl lg:text-[6rem]">
-          {tagline2}
-        </h1>
-      </div>
 
       <div className="cta-wrapper gsap-reveal pointer-events-auto absolute z-10 flex w-screen flex-col items-center justify-center px-4 text-center will-change-transform">
         <h2 className="text-silver-matte mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
@@ -440,15 +386,22 @@ export function CinematicHero({
         >
           <div className="card-sheen" aria-hidden="true" />
 
-          <div className="relative mx-auto flex h-full w-full max-w-7xl flex-col justify-evenly px-4 py-6 lg:grid lg:grid-cols-3 lg:items-center lg:gap-8 lg:px-12 lg:py-0">
-            <div className="card-right-text gsap-reveal order-1 z-20 flex w-full justify-center lg:order-3 lg:justify-end">
-              <h2 className="text-card-silver-matte text-6xl font-black uppercase tracking-tighter md:text-[6rem] lg:mt-0 lg:text-[8rem]">
-                {brandName}
-              </h2>
+          <div className="relative mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-4 py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-12 lg:py-0">
+
+            {/* LEFT SECTION - Text Content */}
+            <div className="card-left-text gsap-reveal flex w-full flex-col justify-center text-center lg:text-left lg:pr-8">
+              <h3 className="mb-0 text-2xl font-bold tracking-tight text-white md:text-3xl lg:mb-6 lg:text-4xl">
+                {cardHeading}
+              </h3>
+              <p className="mx-auto text-sm leading-relaxed font-normal text-blue-100/70 md:text-base lg:mx-0 lg:max-w-md lg:text-lg">
+                {cardDescription}
+              </p>
             </div>
 
-            <div className="mockup-scroll-wrapper order-2 relative z-10 flex h-[380px] w-full items-center justify-center lg:order-2 lg:h-[600px]" style={{ perspective: "1000px" }}>
-              <div className="relative flex h-full w-full scale-[0.65] items-center justify-center md:scale-[0.85] lg:scale-100">
+            {/* RIGHT SECTION - Phone + Cards */}
+            <div className="mockup-scroll-wrapper relative z-10 flex h-[380px] w-full items-center justify-center lg:h-[600px]" style={{ perspective: "1000px" }}>
+              {/* Phone Mockup Container */}
+              <div className="relative flex h-full w-full scale-[0.65] items-center justify-center md:scale-[0.85] lg:scale-100 z-10">
                 <div
                   ref={mockupRef}
                   className="iphone-bezel transform-style-3d relative flex h-[580px] w-[280px] flex-col rounded-[3rem] will-change-transform"
@@ -465,81 +418,31 @@ export function CinematicHero({
                       <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
                     </div>
 
-                    <div className="relative flex h-full w-full flex-col px-5 pt-12 pb-8">
-                      <div className="phone-widget mb-8 flex items-center justify-between">
-                        <div className="flex flex-col">
-                          <span className="mb-1 text-[10px] font-bold uppercase tracking-widest text-neutral-400">Today</span>
-                          <span className="text-xl font-bold tracking-tight text-white drop-shadow-md">Journey</span>
-                        </div>
-                        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-bold text-neutral-200 shadow-lg shadow-black/50">JS</div>
-                      </div>
-
-                      <div className="phone-widget relative mx-auto mb-8 flex h-44 w-44 items-center justify-center drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)]">
-                        <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
-                          <circle cx="88" cy="88" r="64" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="12" />
-                          <circle className="progress-ring" cx="88" cy="88" r="64" fill="none" stroke="#3B82F6" strokeWidth="12" />
-                        </svg>
-                        <div className="z-10 flex flex-col items-center text-center">
-                          <span className="counter-val text-4xl font-extrabold tracking-tighter text-white">0</span>
-                          <span className="mt-0.5 text-[8px] font-bold uppercase tracking-[0.1em] text-blue-200/50">{metricLabel}</span>
-                        </div>
-                      </div>
-
-                      <div className="space-y-3">
-                        <div className="phone-widget widget-depth flex items-center rounded-2xl p-3">
-                          <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-blue-400/20 bg-gradient-to-br from-blue-500/20 to-blue-600/5 shadow-inner">
-                            <CheckCircle2 className="h-4 w-4 text-blue-400 drop-shadow-md" aria-hidden="true" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="mb-2 h-2 w-20 rounded-full bg-neutral-300 shadow-inner" />
-                            <div className="h-1.5 w-12 rounded-full bg-neutral-600 shadow-inner" />
-                          </div>
-                        </div>
-                        <div className="phone-widget widget-depth flex items-center rounded-2xl p-3">
-                          <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-400/20 bg-gradient-to-br from-emerald-500/20 to-emerald-600/5 shadow-inner">
-                            <Check className="h-4 w-4 text-emerald-400 drop-shadow-md" aria-hidden="true" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="mb-2 h-2 w-16 rounded-full bg-neutral-300 shadow-inner" />
-                            <div className="h-1.5 w-24 rounded-full bg-neutral-600 shadow-inner" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="absolute bottom-2 left-1/2 h-[4px] w-[120px] -translate-x-1/2 rounded-full bg-white/20 shadow-[0_1px_2px_rgba(0,0,0,0.5)]" />
+                    <div className="relative flex h-full w-full items-center justify-center">
+                      <img
+                        src="/phone_img.jpeg"
+                        alt="Phone screen"
+                        className="h-full w-full object-cover rounded-[2.3rem]"
+                      />
                     </div>
                   </div>
                 </div>
 
-                <div className="floating-badge floating-ui-badge absolute top-6 left-[-15px] z-30 flex items-center gap-3 rounded-xl p-3 lg:top-12 lg:left-[-80px] lg:gap-4 lg:rounded-2xl lg:p-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-blue-400/30 bg-gradient-to-b from-blue-500/20 to-blue-900/10 shadow-inner lg:h-10 lg:w-10">
-                    <Flame className="h-4 w-4 text-orange-300 drop-shadow-lg lg:h-5 lg:w-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold tracking-tight text-white lg:text-sm">1 Year Streak</p>
-                    <p className="text-[10px] font-medium text-blue-200/50 lg:text-xs">Milestone unlocked</p>
-                  </div>
+                {/* Floating Cards - Positioned outside phone mockup */}
+                <div className="floating-badge floating-ui-badge absolute top-8 -left-24 lg:top-8 lg:-left-24 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">SAT Module</p>
+                  <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
+                    Developed features for SAT preparation platform. Implemented mock tests, performance tracking, and analytics with focus on scalable UI and real-time data handling.
+                  </p>
                 </div>
 
-                <div className="floating-badge floating-ui-badge absolute right-[-15px] bottom-12 z-30 flex items-center gap-3 rounded-xl p-3 lg:right-[-80px] lg:bottom-20 lg:gap-4 lg:rounded-2xl lg:p-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full border border-indigo-400/30 bg-gradient-to-b from-indigo-500/20 to-indigo-900/10 shadow-inner lg:h-10 lg:w-10">
-                    <Handshake className="h-4 w-4 text-indigo-200 drop-shadow-lg lg:h-5 lg:w-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold tracking-tight text-white lg:text-sm">Sponsor Update</p>
-                    <p className="text-[10px] font-medium text-blue-200/50 lg:text-xs">Shared successfully</p>
-                  </div>
+                <div className="floating-badge floating-ui-badge absolute bottom-8 -right-12 lg:bottom-8 lg:-right-12 z-20 flex flex-col gap-2 rounded-xl p-3 lg:gap-3 lg:rounded-2xl lg:p-4 w-52 lg:w-64">
+                  <p className="text-xs font-bold tracking-tight text-white lg:text-sm uppercase">NISM Module</p>
+                  <p className="text-[10px] font-medium text-blue-200/70 lg:text-xs leading-relaxed">
+                    Built and adapted system for finance-based certification exams. Designed mock test flows, dashboard integration, and ensured alignment with exam-specific requirements.
+                  </p>
                 </div>
               </div>
-            </div>
-
-            <div className="card-left-text gsap-reveal order-3 z-20 flex w-full flex-col justify-center px-4 text-center lg:order-1 lg:px-0 lg:text-left">
-              <h3 className="mb-0 text-2xl font-bold tracking-tight text-white md:text-3xl lg:mb-5 lg:text-4xl">
-                {cardHeading}
-              </h3>
-              <p className="mx-auto hidden max-w-sm text-sm leading-relaxed font-normal text-blue-100/70 md:block md:text-base lg:mx-0 lg:max-w-none lg:text-lg">
-                {cardDescription}
-              </p>
             </div>
           </div>
         </div>
