@@ -6,6 +6,8 @@
   :root {
     --background: 0 0% 7%;
     --foreground: 0 0% 95%;
+    --color-foreground: hsl(var(--foreground));
+    --color-background: hsl(var(--background));
   }
 
   body {

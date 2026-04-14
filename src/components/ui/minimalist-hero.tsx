@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, type MotionStyle } from 'framer-motion'
 import type { LucideIcon } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -17,6 +17,9 @@ interface MinimalistHeroProps {
   socialLinks: { icon: LucideIcon; href: string }[]
   locationText: string
   className?: string
+  rootStyle?: MotionStyle
+  imageSectionStyle?: MotionStyle
+  textSectionStyle?: MotionStyle
 }
 
 const NavLink = ({
@@ -55,9 +58,13 @@ export const MinimalistHero = ({
   socialLinks,
   locationText,
   className,
+  rootStyle,
+  imageSectionStyle,
+  textSectionStyle,
 }: MinimalistHeroProps) => {
   return (
-    <div
+    <motion.div
+      style={rootStyle}
       className={cn(
         'relative flex h-screen w-full flex-col items-center justify-between overflow-hidden bg-background pl-4 pr-8 py-8 font-sans md:pl-8 md:pr-12 md:py-12',
         className,
@@ -94,6 +101,7 @@ export const MinimalistHero = ({
 
       <div className="relative w-full flex-grow flex flex-col md:flex-row items-center md:-mt-12">
         <motion.div
+          style={textSectionStyle}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
@@ -111,7 +119,10 @@ export const MinimalistHero = ({
         </motion.div>
 
         {/* Image + circle */}
-        <div className="relative -mt-28 md:mt-2 flex w-full flex-1 items-end md:w-auto md:flex-none md:items-center justify-center shrink-0 h-[64vh] md:h-auto md:ml-[100px] lg:ml-[160px]">
+        <motion.div
+          style={imageSectionStyle}
+          className="relative -mt-28 md:mt-2 flex w-full flex-1 items-end md:w-auto md:flex-none md:items-center justify-center shrink-0 h-[64vh] md:h-auto md:ml-[100px] lg:ml-[160px]"
+        >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -132,10 +143,11 @@ export const MinimalistHero = ({
                 'https://placehold.co/400x600/eab308/ffffff?text=Image+Not+Found'
             }}
           />
-        </div>
+        </motion.div>
       </div>
 
       <motion.div
+        style={textSectionStyle}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.2 }}
@@ -172,6 +184,6 @@ export const MinimalistHero = ({
           {locationText}
         </motion.div>
       </footer>
-    </div>
+    </motion.div>
   )
 }
