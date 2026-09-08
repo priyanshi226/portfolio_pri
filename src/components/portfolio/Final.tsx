@@ -10,7 +10,7 @@ const links = [
 ]
 
 const fieldClass =
-  'w-full rounded-xl border border-ink/10 bg-paper/95 px-4 py-3 text-[14.5px] text-ink placeholder:text-ink/40 shadow-[0_2px_6px_rgba(0,0,0,0.08)] outline-none transition-all focus:border-lavender-deep focus:ring-2 focus:ring-lavender-deep/35'
+  'w-full rounded-xl border border-lavender-dark/25 bg-paper px-4 py-3 text-[14.5px] text-ink placeholder:text-ink/40 shadow-[0_2px_6px_rgba(0,0,0,0.12)] outline-none transition-all focus:border-lavender-deep focus:ring-2 focus:ring-lavender-deep/35'
 
 const labelClass = 'text-[11px] font-semibold uppercase tracking-[0.14em] text-paper/60'
 

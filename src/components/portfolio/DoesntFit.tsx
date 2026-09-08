@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Bug, Calculator, GraduationCap, Heart, Presentation, Users, type LucideIcon } from 'lucide-react'
 import { beyondResume } from '@/data/content'
+import { HeartDoodle, StarDoodle } from './Doodles'
 
 const icons: Record<string, LucideIcon> = {
   graduationCap: GraduationCap,
@@ -18,7 +19,7 @@ const toneStyles: Record<Tone, { bg: string; icon: string }> = {
   yellow: { bg: 'bg-[#F7F0D6]', icon: 'bg-white/50 text-[#8a6d2c]' },
   lavender: { bg: 'bg-[#EEE4F7]', icon: 'bg-white/50 text-lavender-deep' },
   blush: { bg: 'bg-blush/45', icon: 'bg-white/50 text-[#8a4f5e]' },
-  cream: { bg: 'bg-paper', icon: 'bg-lavender/30 text-lavender-deep' },
+  cream: { bg: 'bg-paper-warm', icon: 'bg-lavender/30 text-lavender-deep' },
   sage: { bg: 'bg-[#e9edc9]/70', icon: 'bg-white/50 text-[#4f5a2c]' },
 }
 
@@ -36,17 +37,40 @@ function TapeStrip({ className }: { className?: string }) {
 
 export function DoesntFit() {
   return (
-    <section className="relative bg-mist py-20 sm:py-24">
-      <div className="section-pad">
+    <section className="relative overflow-hidden bg-paper py-20 sm:py-24">
+      <motion.span
+        aria-hidden="true"
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{ opacity: 0.55, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+        className="pointer-events-none absolute left-10 top-10 hidden text-lavender-deep/60 sm:block"
+      >
+        <StarDoodle className="h-5 w-5" />
+      </motion.span>
+
+      <div className="section-pad relative">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-2xl text-center"
+          className="relative mx-auto max-w-2xl text-center"
         >
           <p className="font-script text-[17px] leading-none text-lavender-deep/80 sm:text-[19px]">{beyondResume.eyebrow}</p>
-          <h2 className="mt-4 font-serif text-[36px] leading-[1.05] tracking-tight text-ink sm:text-[50px]">{beyondResume.heading}</h2>
+          <h2 className="mt-4 font-serif text-[36px] leading-[1.05] tracking-tight text-ink sm:text-[50px]">
+            {beyondResume.heading}
+            <motion.span
+              aria-hidden="true"
+              initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
+              whileInView={{ opacity: 0.75, scale: 1, rotate: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="ml-2 inline-block align-top text-blush"
+            >
+              <HeartDoodle className="inline-block h-4 w-5" />
+            </motion.span>
+          </h2>
           <p className="mt-5 text-[14.5px] leading-[1.65] text-ink/70 sm:text-[16px]">{beyondResume.intro}</p>
         </motion.div>
 

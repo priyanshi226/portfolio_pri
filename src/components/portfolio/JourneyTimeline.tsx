@@ -5,6 +5,7 @@ import {
 import { SchoolChapterBlock } from './SchoolChapter'
 import { CollegeChapterBlock } from './CollegeChapter'
 import { OrchestrixChapterBlock } from './OrchestrixChapter'
+import { DotCluster, StarDoodle } from './Doodles'
 
 function TimelineLine() {
   return (
@@ -22,14 +23,35 @@ function TimelineLine() {
 
 export function JourneyTimeline() {
   return (
-    <section id="journey" className="relative bg-lavender py-14 sm:py-[72px]">
-      <div className="section-pad">
+    <section id="journey" className="relative overflow-hidden bg-lavender py-14 sm:py-[72px]">
+      <motion.span
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.55 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+        className="pointer-events-none absolute left-8 top-10 hidden text-ink/25 sm:block"
+      >
+        <DotCluster className="h-4 w-7" />
+      </motion.span>
+      <motion.span
+        aria-hidden="true"
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{ opacity: 0.6, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.15 }}
+        className="pointer-events-none absolute right-10 top-12 hidden text-lavender-deep/60 sm:block"
+      >
+        <StarDoodle className="h-5 w-5" />
+      </motion.span>
+
+      <div className="section-pad relative">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="relative text-center"
         >
           <h2 className="font-serif text-[42px] leading-none tracking-tight text-ink sm:text-[56px]">MY JOURNEY</h2>
           <p className="font-script -mt-1 text-[27px] text-lavender-deep sm:text-[32px]">(so far)</p>

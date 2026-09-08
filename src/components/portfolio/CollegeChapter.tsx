@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { asset, collegeChapter } from '@/data/content'
+import { PlusDoodle } from './Doodles'
 
 function TapeStrip({ className }: { className?: string }) {
   return (
@@ -93,6 +94,16 @@ export function CollegeChapterBlock() {
           className="min-w-0 lg:pl-3"
         >
           <div className="relative bg-paper/85 px-6 py-6 shadow-[0_18px_32px_-24px_rgba(20,18,12,0.55)] sm:px-8 sm:py-7">
+            <motion.span
+              aria-hidden="true"
+              initial={{ opacity: 0, rotate: -8 }}
+              whileInView={{ opacity: 0.65, rotate: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="pointer-events-none absolute -right-3 -top-3 hidden text-lavender-deep sm:block"
+            >
+              <PlusDoodle className="h-4 w-4" />
+            </motion.span>
             <TapeStrip className="-top-3 left-1/2 -ml-8 bg-white/80" />
             <p className="border-b border-lavender-deep/60 pb-2 font-script text-[31px] leading-none text-ink sm:text-[35px]">
               My college journey

@@ -25,7 +25,10 @@
       "Bash(lsof -ti:5179 -sTCP:LISTEN)",
       "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha pratinidhi-laptop.png)",
       "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha pratinidhi-laptop-transparent.png)",
-      "Bash(lsof -ti:5181 -sTCP:LISTEN)"
+      "Bash(lsof -ti:5181 -sTCP:LISTEN)",
+      "Bash(lsof -ti:5194 -sTCP:LISTEN)",
+      "Bash(node /private/tmp/claude-501/-Users-priyanshigupta-Documents-Projects-portfolio-pri/8b4fb678-9b68-4918-bf2a-c66f88d5d659/scratchpad/pratinidhi_pink.mjs)",
+      "Bash(lsof -ti:5196 -sTCP:LISTEN)"
     ]
   }
 }

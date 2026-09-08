@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Code2, Database, Sparkles, Wrench } from 'lucide-react'
-import { TickBurst, UnderlineDoodle } from './Doodles'
+import { PlusDoodle, StarDoodle, TickBurst } from './Doodles'
 
 const toolGroups = [
   {
@@ -31,8 +31,19 @@ const toolGroups = [
 
 export function MeetSection() {
   return (
-    <section id="about" className="relative bg-paper py-14 sm:py-20">
-      <div className="section-pad">
+    <section id="about" className="relative overflow-hidden bg-paper py-14 sm:py-20">
+      <motion.span
+        aria-hidden="true"
+        initial={{ opacity: 0, scale: 0.7 }}
+        whileInView={{ opacity: 0.55, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+        className="pointer-events-none absolute right-10 top-8 hidden text-lilac sm:block"
+      >
+        <StarDoodle className="h-5 w-5" />
+      </motion.span>
+
+      <div className="section-pad relative">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,27 +117,6 @@ export function MeetSection() {
                 be built.
               </p>
             </div>
-
-            {/* <div className="mt-5 border-l-2 border-ink/15 pl-4">
-              <p className="font-serif text-[21px] italic leading-snug text-ink sm:text-[25px]">
-                I didn't want to only write code.
-                <br />
-                I wanted to{' '}
-                <span className="relative inline-block">
-                  understand the whole thing.
-                  <motion.span
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, amount: 0.6 }}
-                    transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
-                    style={{ transformOrigin: 'left' }}
-                    className="absolute -bottom-1 left-0 block w-full"
-                  >
-                    <UnderlineDoodle className="text-mustard" />
-                  </motion.span>
-                </span>
-              </p>
-            </div> */}
           </motion.div>
 
           {/* RIGHT — tools */}
@@ -135,7 +125,19 @@ export function MeetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative"
           >
+            <motion.span
+              aria-hidden="true"
+              initial={{ opacity: 0, rotate: -10 }}
+              whileInView={{ opacity: 0.6, rotate: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="pointer-events-none absolute -left-9 top-1 hidden text-lavender-deep/70 lg:block"
+            >
+              <PlusDoodle className="h-4 w-4" />
+            </motion.span>
+
             <div className="flex items-center gap-4">
               <h3 className="font-serif text-[24px] tracking-tight text-ink sm:text-[28px]">
                 The tools I like to build with

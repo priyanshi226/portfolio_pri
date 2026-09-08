@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { BarChart3, BookOpen, CreditCard, Layers3 } from 'lucide-react'
 import { asset, educado } from '@/data/content'
+import { DotCluster } from './Doodles'
 
 const features = [
   { icon: BookOpen, title: 'AI Tutor with RAG', body: 'LLM-powered tutor using RAG, document chunking, FAISS, LangChain and OpenAI.' },
@@ -37,6 +38,17 @@ function PhoneFrame({ front, src, alt, sizeClass }: { front?: boolean; src: stri
 export function EducadoCase() {
   return (
     <section className="relative overflow-hidden bg-paper text-ink paper-noise">
+      <motion.span
+        aria-hidden="true"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.4 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="pointer-events-none absolute right-10 top-10 hidden text-ink/30 lg:block"
+      >
+        <DotCluster className="h-4 w-7" />
+      </motion.span>
+
       <div className="mx-auto flex w-full max-w-[1420px] min-h-[min(820px,100svh)] items-center px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(420px,1fr)_minmax(460px,1fr)] lg:gap-16 xl:gap-20">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7 }} className="relative mx-auto w-full max-w-[400px]">
@@ -87,7 +99,7 @@ export function EducadoCase() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7, delay: 0.12 }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7, delay: 0.12 }} className="relative w-full">
             <h2 className="font-serif text-[clamp(2.8rem,5vw,5.2rem)] leading-[0.88] tracking-[-0.055em] text-ink">Educado <em className="font-normal">AI</em></h2>
             <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.24em] text-[#7867a4] sm:text-[11px]">AI tutor × learning × backend</p>
             <p className="mt-4 max-w-prose text-[14px] leading-7 text-ink/70 sm:text-[15px]">Led backend development for an AI learning platform, building the systems behind AI tutoring, assessments, payments, learner progress and analytics.</p>

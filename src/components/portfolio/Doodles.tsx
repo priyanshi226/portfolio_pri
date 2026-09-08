@@ -74,6 +74,29 @@ export function StarDoodle({ className }: DoodleProps) {
   )
 }
 
+export function HeartDoodle({ className }: DoodleProps) {
+  return (
+    <svg viewBox="0 0 32 28" fill="none" className={cn('w-5 h-4', className)} aria-hidden="true">
+      <path
+        d="M16 25C8 19 2 14 2 8.5 2 4.9 4.8 2 8.4 2c2.2 0 4.2 1.1 5.6 3 1.4-1.9 3.4-3 5.6-3C23.2 2 26 4.9 26 8.5c0 5.5-6 10.5-14 16.5Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        fill="none"
+      />
+    </svg>
+  )
+}
+
+export function TinyWave({ className }: DoodleProps) {
+  return (
+    <svg viewBox="0 0 60 14" preserveAspectRatio="none" fill="none" className={cn('w-12 h-3', className)} aria-hidden="true">
+      <path d="M2 8C8 2 14 2 20 8C26 14 32 14 38 8C44 2 50 2 56 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+    </svg>
+  )
+}
+
 export function CircleScribble({ className }: DoodleProps) {
   return (
     <svg viewBox="0 0 100 60" fill="none" className={cn('w-24 h-14', className)} aria-hidden="true">
@@ -222,6 +245,22 @@ export function BigSquiggle({ className }: DoodleProps) {
         strokeLinecap="round"
         fill="none"
       />
+    </svg>
+  )
+}
+
+export function ChatBubbleMark({ className }: DoodleProps) {
+  return (
+    <svg viewBox="0 0 32 26" fill="none" className={cn('w-4 h-3.5', className)} aria-hidden="true">
+      <path
+        d="M2 12.5C2 6.7 7.4 2 14.5 2S27 6.7 27 12.5 21.6 23 14.5 23c-1.5 0-2.9-.2-4.2-.6L4 25l1.6-5.4C3.3 17.7 2 15.2 2 12.5Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path d="M9.5 11.5H19.5M9.5 15.5H16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   )
 }

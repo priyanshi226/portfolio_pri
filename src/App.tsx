@@ -15,7 +15,6 @@ const c = {
   olive: '#39421F',
   oliveDark: '#2B3218',
   lavender: '#DDD5EE',
-  mist: '#EEE8F7',
 }
 
 function App() {
@@ -30,9 +29,9 @@ function App() {
         <EducadoCase />
         <WavyDivider topColor={c.paper} bottomColor={c.lavender} />
         <JourneyTimeline />
-        <WavyDivider topColor={c.lavender} bottomColor={c.mist} />
+        <WavyDivider topColor={c.lavender} bottomColor={c.paper} />
         <DoesntFit />
-        <WavyDivider topColor={c.mist} bottomColor={c.olive} />
+        <WavyDivider topColor={c.paper} bottomColor={c.olive} />
         <Final />
       </PageFrame>
     </MotionConfig>

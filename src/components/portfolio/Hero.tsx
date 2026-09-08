@@ -3,7 +3,7 @@ import { profile, heroCopy } from '@/data/content'
 import {
   BigSquiggle,
   DocumentMark,
-  EnvelopeMark,
+  ChatBubbleMark,
   LinkedInMark,
   PinDoodle,
   PlusDoodle,
@@ -90,7 +90,7 @@ export function Hero() {
               aria-hidden="true"
             >
               <motion.path
-                d="M10 8C8 30 14 52 32 66C44 75 58 76 70 70"
+                d="M14 6C9 30 13 54 32 67C44 75 60 76 74 69"
                 stroke="currentColor"
                 strokeWidth="2.4"
                 strokeLinecap="round"
@@ -99,7 +99,7 @@ export function Hero() {
                 transition={{ duration: 0.9, delay: 1, ease: 'easeInOut' }}
               />
               <motion.path
-                d="M56 66L70 70L64 55"
+                d="M60 58L76 68L65 80"
                 stroke="currentColor"
                 strokeWidth="2.4"
                 strokeLinecap="round"
@@ -111,14 +111,18 @@ export function Hero() {
             </motion.svg>
 
             <motion.a
-              href={`mailto:${profile.email}`}
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault()
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }}
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 2 }}
               whileHover={{ y: -2 }}
               className="group mb-1 inline-flex items-center gap-3 rounded-full border border-paper/20 bg-paper px-8 py-4 text-[15px] font-semibold uppercase tracking-[0.12em] text-olive-dark shadow-[0_14px_28px_-12px_rgba(0,0,0,0.4)] transition-colors hover:bg-blush/90"
             >
-              <EnvelopeMark className="w-5 h-4" />
+              <ChatBubbleMark className="w-5 h-4" />
               Let's Talk
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </motion.a>
