@@ -122,7 +122,7 @@ export function OrchestrixChapterBlock() {
               whileInView={{ opacity: 1, y: 0, rotate: -2 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto w-full max-w-[360px] shrink-0 border-[10px] border-paper bg-paper pb-9 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] lg:mx-0 lg:w-[60%]"
+              className="relative mx-auto w-full max-w-[420px] shrink-0 border-[10px] border-paper bg-paper pb-9 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] lg:mx-0 lg:w-[70%]"
             >
               <TapeStrip className="-top-4 left-1/2 -ml-7 bg-lilac/65" />
               <img
