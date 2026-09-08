@@ -126,8 +126,8 @@ export function OrchestrixChapterBlock() {
             >
               <TapeStrip className="-top-4 left-1/2 -ml-7 bg-lilac/65" />
               <img
-                src={asset('orchestrix-workspace.png')}
-                alt="A software engineering workspace"
+                src={asset('journey-orchestrix.png')}
+                alt="A software engineering workspace with notebook and phone"
                 className="aspect-[4/5] w-full object-cover object-center"
                 loading="lazy"
               />

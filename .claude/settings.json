@@ -9,7 +9,8 @@
       "Bash(node shot2.mjs)",
       "Bash(NODE_PATH=/Users/priyanshigupta/.npm/_npx/705bc6b22212b352/node_modules node -e ' *)",
       "Bash(python3 -c ' *)",
-      "Bash(curl -sf http://localhost:5173/portfolio_pri/)"
+      "Bash(curl -sf http://localhost:5173/portfolio_pri/)",
+      "Bash(curl -s -I http://localhost:5173/)"
     ]
   }
 }

@@ -10,9 +10,10 @@ const features = [
 ]
 
 const notes = [
-  { text: 'AI tutoring for\nreal progress', className: 'left-0 top-0 -rotate-[6deg] bg-[#e6def7]' },
-  { text: 'NISM + SAT\nmade simpler', className: 'right-0 top-0 rotate-[5deg] bg-[#f6dfaa]' },
-  { text: 'From concepts\nto confidence', className: 'left-0 bottom-0 rotate-[4deg] bg-[#f4cfd2]' },
+  { text: 'AI tutoring for real progress', className: '-left-16 top-0 -rotate-[4deg] bg-[#e6def7]' },
+  { text: 'NISM + SAT made simpler', className: '-left-10 bottom-0 rotate-[3deg] bg-[#f6dfaa]' },
+  { text: 'Personalized practice & progress', className: '-right-12 top-8 rotate-[2deg] bg-[#f2d4d8]' },
+  { text: 'Instant explanations, anytime', className: '-right-16 bottom-6 -rotate-[3deg] bg-[#dfd7f2]' },
 ]
 
 function PhoneFrame({ front, sizeClass }: { front?: boolean; sizeClass: string }) {
@@ -41,12 +42,12 @@ function PhoneFrame({ front, sizeClass }: { front?: boolean; sizeClass: string }
 export function EducadoCase() {
   return (
     <section className="relative overflow-hidden bg-paper text-ink paper-noise">
-      <div className="section-pad flex min-h-[min(820px,100svh)] items-center py-16 lg:py-20">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(360px,0.9fr)_minmax(400px,1fr)] lg:gap-16 xl:gap-20">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7 }} className="relative mx-auto w-full max-w-[340px]">
-            <p className="mb-8 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-ink/45"><span>Selected work</span><span className="h-px w-9 bg-ink/25" /><span>{educado.number}</span></p>
+      <div className="mx-auto flex w-full max-w-[1420px] min-h-[min(820px,100svh)] items-center px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(420px,1fr)_minmax(460px,1fr)] lg:gap-16 xl:gap-20">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7 }} className="relative mx-auto w-full max-w-[400px]">
+            <p className="mb-10 flex items-center gap-2.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-ink/40"><span>Selected work</span><span className="h-px w-7 bg-ink/20" /><span>{educado.number}</span></p>
 
-            <div className="relative mx-auto h-[380px] w-[230px] sm:h-[460px] sm:w-[280px] lg:h-[520px] lg:w-[320px]">
+            <div className="relative mx-auto h-[360px] w-[220px] sm:h-[440px] sm:w-[270px] lg:h-[500px] lg:w-[310px]">
               {notes.map((note, i) => (
                 <motion.span
                   key={note.text}
@@ -54,9 +55,9 @@ export function EducadoCase() {
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                  className={`absolute z-30 flex aspect-square w-[78px] items-center justify-center px-2 text-center font-script text-[13px] leading-[1.05] text-ink/80 shadow-[2px_5px_12px_rgba(28,24,17,0.14)] sm:w-[92px] sm:text-[15px] ${note.className}`}
+                  className={`absolute z-30 flex aspect-square w-[82px] items-center justify-center px-3 text-center font-script text-[12px] leading-[1.18] text-ink/80 shadow-[2px_5px_12px_rgba(28,24,17,0.12)] sm:w-[96px] sm:text-[13px] lg:w-[104px] lg:text-[14px] ${note.className}`}
                 >
-                  {note.text.split('\n').map((line) => <span key={line}>{line}<br /></span>)}
+                  {note.text}
                 </motion.span>
               ))}
 
@@ -65,9 +66,9 @@ export function EducadoCase() {
                 whileInView={{ opacity: 1, x: 0, rotate: -8 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7 }}
-                className="absolute left-6 top-6 z-10 sm:left-8 sm:top-8 lg:left-10 lg:top-10"
+                className="absolute left-5 top-7 z-10 sm:left-6 sm:top-8 lg:left-7 lg:top-8"
               >
-                <PhoneFrame sizeClass="w-[120px] sm:w-[149px] lg:w-[171px]" />
+                <PhoneFrame sizeClass="w-[120px] sm:w-[150px] lg:w-[180px]" />
               </motion.div>
 
               <motion.div
@@ -77,7 +78,7 @@ export function EducadoCase() {
                 transition={{ duration: 0.7, delay: 0.12 }}
                 className="absolute bottom-0 right-0 z-20"
               >
-                <PhoneFrame front sizeClass="w-[150px] sm:w-[186px] lg:w-[214px]" />
+                <PhoneFrame front sizeClass="w-[150px] sm:w-[185px] lg:w-[220px]" />
               </motion.div>
             </div>
           </motion.div>

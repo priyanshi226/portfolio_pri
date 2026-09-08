@@ -8,7 +8,6 @@ import { PratinidhiCase } from '@/components/portfolio/PratinidhiCase'
 import { EducadoCase } from '@/components/portfolio/EducadoCase'
 import { DoesntFit } from '@/components/portfolio/DoesntFit'
 import { Toolbox } from '@/components/portfolio/Toolbox'
-import { Currently } from '@/components/portfolio/Currently'
 import { Final } from '@/components/portfolio/Final'
 import { WavyDivider } from '@/components/portfolio/WavyDivider'
 
@@ -35,9 +34,7 @@ function App() {
         <DoesntFit />
         <WavyDivider topColor={c.paper} bottomColor={c.mist} />
         <Toolbox />
-        <WavyDivider topColor={c.mist} bottomColor={c.paper} />
-        <Currently />
-        <WavyDivider topColor={c.paper} bottomColor={c.olive} />
+        <WavyDivider topColor={c.mist} bottomColor={c.olive} />
         <Final />
       </PageFrame>
     </MotionConfig>

@@ -119,7 +119,7 @@ export const pratinidhi = {
   channelCount: '5',
   channelLabel: 'communication channels unified into one pipeline',
   tech: ['React.js', 'JavaScript', 'REST APIs', 'Webhooks', 'RAG', 'Embeddings', 'Semantic Search', 'LLM APIs'],
-  screenshot: asset('pratinidhi-laptop-transparent.png'),
+  screenshot: asset('pratinidhi-laptop.png'),
   screenshotAlt: 'Pratinidhi AI CRM dashboard displayed on a laptop',
 }
 

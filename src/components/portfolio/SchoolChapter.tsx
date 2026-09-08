@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { schoolChapter } from '@/data/content'
-import { ArrowDoodle, CheckMark, MedalDoodle, SchoolBuildingIllustration } from './Doodles'
+import { asset, schoolChapter } from '@/data/content'
+import { ArrowDoodle, CheckMark, MedalDoodle } from './Doodles'
 
 function TapeStrip({ className }: { className?: string }) {
   return (
@@ -109,8 +109,8 @@ export function SchoolChapterBlock() {
             className="relative z-0 mr-auto w-[78%] max-w-[342px] border-4 border-paper bg-paper p-1 shadow-[0_18px_36px_-16px_rgba(20,18,12,0.45)] sm:ml-5"
           >
             <TapeStrip className="-top-4 left-1/2 -ml-8 -rotate-3 bg-lilac/65" />
-            <div className="aspect-[4/3] overflow-hidden bg-lavender/30">
-              <SchoolBuildingIllustration />
+            <div className="aspect-[4/3] overflow-hidden">
+              <img src={asset('journey-school.png')} alt="S.D. Public School" className="h-full w-full object-cover" loading="lazy" />
             </div>
           </motion.figure>
 

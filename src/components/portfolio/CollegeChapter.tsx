@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { profile, collegeChapter } from '@/data/content'
+import { asset, collegeChapter } from '@/data/content'
 
 function TapeStrip({ className }: { className?: string }) {
   return (
@@ -79,7 +79,7 @@ export function CollegeChapterBlock() {
             className="relative mt-9 ml-3 w-[88%] max-w-[440px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
           >
             <TapeStrip className="-top-5 left-1/2 -ml-8 bg-lilac/65" />
-            <img src={profile.portrait} alt="Priyanshi Gupta" className="aspect-[4/5] w-full object-cover object-center" />
+            <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[4/5] w-full object-cover object-center" />
             <figcaption className="font-script absolute bottom-2 right-3 text-[18px] leading-none text-ink/65">
               grateful for this chapter ♡
             </figcaption>

@@ -27,8 +27,8 @@ const notes = [
 export function PratinidhiCase() {
   return (
     <section id="work" className="relative overflow-hidden bg-olive-dark text-paper">
-      <div className="relative mx-auto flex min-h-[min(850px,100svh)] w-full max-w-[1440px] items-center px-6 py-16 sm:px-10 lg:px-16 lg:py-14">
-        <div className="grid w-full items-center gap-12 xl:grid-cols-[minmax(320px,0.83fr)_minmax(620px,1.57fr)] xl:gap-20">
+      <div className="relative mx-auto flex min-h-[min(850px,100svh)] w-full max-w-[1320px] items-center px-6 py-16 sm:px-10 lg:px-16 lg:py-14">
+        <div className="grid w-full items-center gap-12 xl:grid-cols-[auto_auto] xl:justify-center xl:gap-20">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.7 }} className="max-w-md">
             <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-paper/55"><span>Selected work</span><span className="h-px w-9 bg-paper/35" /><span>{pratinidhi.number}</span></div>
             <h2 className="mt-8 whitespace-nowrap font-serif text-[clamp(2.35rem,3.6vw,4.4rem)] leading-[0.9] tracking-[-0.055em] text-paper">Pratinidhi <em className="font-normal">AI</em></h2>
@@ -43,11 +43,11 @@ export function PratinidhiCase() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8, delay: 0.1 }} className="min-w-0">
-            <div className="relative mx-auto max-w-[840px]">
+            <div className="relative mx-auto max-w-[720px] xl:mx-0">
               <div className="absolute inset-x-[10%] bottom-[3%] h-11 rounded-[100%] bg-black/45 blur-xl" />
               <img src={pratinidhi.screenshot} alt={pratinidhi.screenshotAlt} className="relative z-10 block w-full" loading="lazy" />
             </div>
-            <div className="relative z-20 mx-auto mt-4 grid max-w-[840px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+            <div className="relative z-20 mx-auto mt-5 grid max-w-[720px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:mx-0">
               {notes.map((note, index) => (
                 <motion.article key={note.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.45, delay: 0.2 + index * 0.08 }} className={`relative aspect-square px-4 py-4 shadow-[4px_8px_16px_rgba(0,0,0,0.22)] sm:px-4 sm:py-4 ${note.className} ${index % 2 === 1 ? 'sm:translate-y-2 lg:translate-y-1' : ''}`}>
                   <span aria-hidden="true" className="absolute -top-2 left-1/2 h-3 w-12 -translate-x-1/2 bg-paper/40" />

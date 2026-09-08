@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { qaChapter } from '@/data/content'
+import { asset, qaChapter } from '@/data/content'
 import { ArrowDoodle, StarDoodle } from './Doodles'
 
 function TapeStrip({ className }: { className?: string }) {
@@ -22,50 +22,15 @@ const fadeIn = {
 
 function InternshipCertificate() {
   return (
-    <motion.div
+    <motion.figure
       initial={{ opacity: 0, y: 20, rotate: -4 }}
       whileInView={{ opacity: 1, y: 0, rotate: -2 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-      className="relative mx-auto w-full max-w-[530px] border-[12px] border-[#F6F0DF] bg-paper p-2 shadow-[0_22px_42px_-20px_rgba(20,18,12,0.55)]"
+      className="relative mx-auto w-full max-w-[530px]"
     >
-      <TapeStrip className="-top-5 left-1/2 -ml-8 bg-lilac/65" />
-      <div className="relative min-h-[390px] overflow-hidden border border-ink/10 bg-[#FCF9F1] px-5 py-7 sm:min-h-[430px] sm:px-8 sm:py-9">
-        <div className="absolute -left-10 -top-10 h-28 w-28 rounded-full border-[18px] border-lilac/10" aria-hidden="true" />
-        <div className="absolute -bottom-12 -right-12 h-32 w-32 rounded-full border-[20px] border-mustard/10" aria-hidden="true" />
-
-        <div className="relative flex items-center justify-between text-[11px] font-bold tracking-wide sm:text-[13px]">
-          <span className="flex items-center gap-1.5 text-[#295c82]">
-            <span className="h-4 w-4 rounded-full border-[3px] border-[#d79b3c]" />
-            SAKSOFT
-          </span>
-          <span className="text-ink/70">360<span className="text-[#3c91a3]">LOGICA</span></span>
-        </div>
-
-        <div className="relative mt-9 text-center">
-          <p className="text-[16px] font-semibold tracking-[0.12em] text-ink/80 sm:text-[19px]">INTERNSHIP CERTIFICATE</p>
-          <p className="mt-4 text-[11px] text-ink/55 sm:text-[12px]">This is to certify that</p>
-          <p className="font-script mt-1 text-[29px] leading-none text-ink sm:text-[34px]">Priyanshi Gupta</p>
-          <div className="mx-auto mt-2 h-px w-3/4 bg-ink/15" />
-          <p className="mx-auto mt-4 max-w-[330px] text-[11px] leading-relaxed text-ink/70 sm:text-[12px]">
-            has successfully completed an internship at 360logica / Saksoft as a Quality Assurance Intern from June
-            2024 to August 2024.
-          </p>
-          <p className="mx-auto mt-4 max-w-[350px] text-[10px] leading-relaxed text-ink/55 sm:text-[11px]">
-            During this period, she demonstrated a strong willingness to learn, a proactive approach, and valuable
-            contributions to the team.
-          </p>
-        </div>
-
-        <div className="relative mt-7 flex items-end justify-between text-center text-[9px] text-ink/55 sm:text-[10px]">
-          <div className="w-20 border-t border-ink/35 pt-1">August 2024<br />Date</div>
-          <div className="w-24 border-t border-ink/35 pt-1">
-            <span className="font-script text-[17px] leading-none text-ink/65">Saksoft</span><br />
-            Authorized Signatory
-          </div>
-        </div>
-      </div>
-    </motion.div>
+      <img src={asset('journey-saksoft-certificate.png')} alt="Saksoft 360Logica Internship Certificate" className="w-full shadow-[0_22px_42px_-20px_rgba(20,18,12,0.55)]" loading="lazy" />
+    </motion.figure>
   )
 }
 
