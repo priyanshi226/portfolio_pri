@@ -49,7 +49,7 @@ export function CollegeChapterBlock() {
         aria-hidden="true"
       />
 
-      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-12">
+      <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-10">
         <motion.section
           initial={fadeIn.hidden}
           whileInView={fadeIn.show(0)}
@@ -76,7 +76,7 @@ export function CollegeChapterBlock() {
             whileInView={{ opacity: 1, y: 0, rotate: -2 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mt-9 ml-3 w-[88%] max-w-[440px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
+            className="relative mt-6 ml-3 w-[88%] max-w-[380px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
           >
             <TapeStrip className="-top-5 left-1/2 -ml-8 bg-lilac/65" />
             <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[9/11] w-full object-cover" style={{ objectPosition: 'center 42%' }} />
@@ -92,12 +92,12 @@ export function CollegeChapterBlock() {
           viewport={{ once: true, amount: 0.25 }}
           className="min-w-0 lg:pl-3"
         >
-          <div className="relative bg-paper/85 px-6 py-7 shadow-[0_18px_32px_-24px_rgba(20,18,12,0.55)] sm:px-8 sm:py-9">
+          <div className="relative bg-paper/85 px-6 py-6 shadow-[0_18px_32px_-24px_rgba(20,18,12,0.55)] sm:px-8 sm:py-7">
             <TapeStrip className="-top-3 left-1/2 -ml-8 bg-lilac/55" />
             <p className="border-b border-lavender-deep/60 pb-2 font-script text-[31px] leading-none text-ink sm:text-[35px]">
               My college journey
             </p>
-            <div className="mt-6 space-y-5 text-[14.5px] leading-[1.62] text-ink/75 sm:text-[15.5px]">
+            <div className="mt-5 space-y-4 text-[14.5px] leading-[1.62] text-ink/75 sm:text-[15.5px]">
               <p>
                 College taught me much more than computer engineering. I usually found myself taking the lead when it
                 came to subject projects — figuring out what needed to be done, dividing the work, bringing ideas
@@ -114,14 +114,14 @@ export function CollegeChapterBlock() {
                 complicated things simply, one clear step at a time.
               </p>
             </div>
-            <blockquote className="mt-6 border-t border-lavender-deep/35 pt-4 font-script text-[20px] leading-[1.15] text-ink/75 sm:text-[23px]">
+            <blockquote className="mt-5 border-t border-lavender-deep/35 pt-3 font-script text-[20px] leading-[1.15] text-ink/75 sm:text-[23px]">
               I came to college to become an engineer.
               <br />
               I left knowing I liked building much more than just software.
             </blockquote>
           </div>
 
-          <div className="mt-7 grid gap-5 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <HighlightCard title="PROJECTS" className="-rotate-1 bg-[#F4DCE1]/70">
               usually the one turning ideas into finished work
             </HighlightCard>
