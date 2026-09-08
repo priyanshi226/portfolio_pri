@@ -7,7 +7,6 @@ import { JourneyTimeline } from '@/components/portfolio/JourneyTimeline'
 import { PratinidhiCase } from '@/components/portfolio/PratinidhiCase'
 import { EducadoCase } from '@/components/portfolio/EducadoCase'
 import { DoesntFit } from '@/components/portfolio/DoesntFit'
-import { Toolbox } from '@/components/portfolio/Toolbox'
 import { Final } from '@/components/portfolio/Final'
 import { WavyDivider } from '@/components/portfolio/WavyDivider'
 
@@ -31,9 +30,8 @@ function App() {
         <JourneyTimeline />
         <PratinidhiCase />
         <EducadoCase />
-        <DoesntFit />
         <WavyDivider topColor={c.paper} bottomColor={c.mist} />
-        <Toolbox />
+        <DoesntFit />
         <WavyDivider topColor={c.mist} bottomColor={c.olive} />
         <Final />
       </PageFrame>

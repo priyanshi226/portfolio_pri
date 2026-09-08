@@ -107,7 +107,7 @@ export function MeetSection() {
               </p>
             </div>
 
-            <div className="mt-5 border-l-2 border-ink/15 pl-4">
+            {/* <div className="mt-5 border-l-2 border-ink/15 pl-4">
               <p className="font-serif text-[21px] italic leading-snug text-ink sm:text-[25px]">
                 I didn't want to only write code.
                 <br />
@@ -126,7 +126,7 @@ export function MeetSection() {
                   </motion.span>
                 </span>
               </p>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* RIGHT — tools */}

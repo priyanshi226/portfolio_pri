@@ -3,7 +3,7 @@ import { doesntFit, soIEndedUp } from '@/data/content'
 
 export function DoesntFit() {
   return (
-    <section className="relative bg-paper py-16 sm:py-20">
+    <section className="relative bg-mist py-16 sm:py-20">
       <div className="section-pad text-center">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
