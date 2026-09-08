@@ -43,9 +43,9 @@ export function PratinidhiCase() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8, delay: 0.1 }} className="min-w-0">
-            <div className="relative mx-auto max-w-[720px] xl:mx-0">
+            <div className="relative mx-auto max-w-[720px] rounded-lg bg-white/95 p-3 xl:mx-0">
               <div className="absolute inset-x-[10%] bottom-[3%] h-11 rounded-[100%] bg-black/45 blur-xl" />
-              <img src={pratinidhi.screenshot} alt={pratinidhi.screenshotAlt} className="relative z-10 block w-full" loading="lazy" />
+              <img src={pratinidhi.screenshot} alt={pratinidhi.screenshotAlt} className="relative z-10 block w-full rounded" loading="lazy" />
             </div>
             <div className="relative z-20 mx-auto mt-5 grid max-w-[720px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:mx-0">
               {notes.map((note, index) => (
