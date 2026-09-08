@@ -35,7 +35,7 @@ export function PratinidhiCase() {
             <p className="mt-7 text-[10px] font-bold uppercase tracking-[0.23em] text-[#d6ddba] sm:text-[11px]">AI agent &amp; CRM workflow platform</p>
             <div className="mt-6 max-w-[25rem] space-y-5 text-[14px] leading-7 text-paper/74 sm:text-[15px]">
               <p>Built and shipped an AI-powered CRM and customer engagement automation platform using Python/Flask, React, TypeScript, Firebase and LLM APIs. The platform brings AI agent workflows, lead intelligence, RAG-powered responses and omnichannel conversations into one workspace.</p>
-              <p>Worked closely with the founding team on end-to-end product delivery — translating business requirements into production-ready frontend and backend features, while also contributing to product decisions, customer-facing problem solving and integrations.</p>
+              <p>Worked closely with the founding team on end-to-end product delivery, translating business requirements into production-ready frontend and backend features, while also contributing to product decisions, customer-facing problem solving and integrations.</p>
             </div>
             <div className="mt-8 flex max-w-md flex-wrap gap-2">
               {['Python / Flask', 'React / TypeScript', 'Firebase', 'LLM APIs', 'RAG', 'Webhooks'].map((tech) => <span key={tech} className="rounded-full border border-paper/15 bg-paper/[0.055] px-3 py-1.5 text-[10px] font-medium text-paper/70 backdrop-blur-sm">{tech}</span>)}
@@ -43,9 +43,9 @@ export function PratinidhiCase() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.8, delay: 0.1 }} className="min-w-0">
-            <div className="relative mx-auto max-w-[720px] rounded-lg bg-white/95 p-3 xl:mx-0">
+            <div className="relative mx-auto max-w-[720px] xl:mx-0">
               <div className="absolute inset-x-[10%] bottom-[3%] h-11 rounded-[100%] bg-black/45 blur-xl" />
-              <img src={pratinidhi.screenshot} alt={pratinidhi.screenshotAlt} className="relative z-10 block w-full rounded" loading="lazy" />
+              <img src={pratinidhi.screenshot} alt={pratinidhi.screenshotAlt} className="relative z-10 block w-full" loading="lazy" />
             </div>
             <div className="relative z-20 mx-auto mt-5 grid max-w-[720px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:mx-0">
               {notes.map((note, index) => (

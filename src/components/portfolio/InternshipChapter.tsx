@@ -29,12 +29,9 @@ function InternshipCertificate() {
       transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
       className="relative mx-auto w-full max-w-[480px] shadow-[0_24px_48px_-20px_rgba(20,18,12,0.5)]"
     >
-      <div className="aspect-[1.4/1] overflow-hidden bg-white">
+      <div className="aspect-[1.1/1] overflow-hidden bg-white">
         <img src={asset('journey-saksoft-certificate.png')} alt="Saksoft 360Logica Internship Certificate" className="h-full w-full object-cover" style={{ objectPosition: 'center 15%' }} loading="lazy" />
       </div>
-      <figcaption className="font-script mt-3 text-center text-[18px] leading-none text-ink/65">
-        turning how things break into how to build them better ♡
-      </figcaption>
     </motion.figure>
   )
 }
@@ -66,15 +63,6 @@ export function InternshipChapterBlock() {
             <ArrowDoodle className="h-7 w-12 rotate-[10deg]" />
           </motion.div>
           <InternshipCertificate />
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 0.55 }}
-            className="font-script mt-4 text-right text-[18px] leading-none text-ink/60"
-          >
-            real experience, real learnings <span className="text-lavender-deep">✦</span>
-          </motion.p>
         </div>
 
         <motion.div

@@ -10,7 +10,22 @@
       "Bash(NODE_PATH=/Users/priyanshigupta/.npm/_npx/705bc6b22212b352/node_modules node -e ' *)",
       "Bash(python3 -c ' *)",
       "Bash(curl -sf http://localhost:5173/portfolio_pri/)",
-      "Bash(curl -s -I http://localhost:5173/)"
+      "Bash(curl -s -I http://localhost:5173/)",
+      "Bash(git revert *)",
+      "Bash(node /private/tmp/claude-501/-Users-priyanshigupta-Documents-Projects-portfolio-pri/8b4fb678-9b68-4918-bf2a-c66f88d5d659/scratchpad/shot.mjs)",
+      "Bash(npx --no-install playwright screenshot --help)",
+      "Bash(npx --no-install playwright screenshot --viewport-size=1400,1000 --full-page http://localhost:5173/portfolio_pri/ /private/tmp/claude-501/-Users-priyanshigupta-Documents-Projects-portfolio-pri/8b4fb678-9b68-4918-bf2a-c66f88d5d659/scratchpad/full.png)",
+      "Bash(node /private/tmp/claude-501/-Users-priyanshigupta-Documents-Projects-portfolio-pri/8b4fb678-9b68-4918-bf2a-c66f88d5d659/scratchpad/shot2.mjs)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/journey-orchestrix.png)",
+      "Bash(node /private/tmp/claude-501/-Users-priyanshigupta-Documents-Projects-portfolio-pri/8b4fb678-9b68-4918-bf2a-c66f88d5d659/scratchpad/measure.mjs)",
+      "Bash(lsof -ti:5175 -sTCP:LISTEN)",
+      "Bash(lsof -ti:5176 -sTCP:LISTEN)",
+      "Bash(lsof -ti:5177 -sTCP:LISTEN)",
+      "Bash(lsof -ti:5178 -sTCP:LISTEN)",
+      "Bash(lsof -ti:5179 -sTCP:LISTEN)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha pratinidhi-laptop.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha pratinidhi-laptop-transparent.png)",
+      "Bash(lsof -ti:5181 -sTCP:LISTEN)"
     ]
   }
 }

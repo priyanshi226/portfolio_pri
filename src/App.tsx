@@ -26,11 +26,11 @@ function App() {
         <Hero />
         <WavyDivider topColor={c.olive} bottomColor={c.paper} />
         <MeetSection />
-        <WavyDivider topColor={c.paper} bottomColor={c.lavender} />
-        <JourneyTimeline />
         <PratinidhiCase />
         <EducadoCase />
-        <WavyDivider topColor={c.paper} bottomColor={c.mist} />
+        <WavyDivider topColor={c.paper} bottomColor={c.lavender} />
+        <JourneyTimeline />
+        <WavyDivider topColor={c.lavender} bottomColor={c.mist} />
         <DoesntFit />
         <WavyDivider topColor={c.mist} bottomColor={c.olive} />
         <Final />

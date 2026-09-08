@@ -18,7 +18,7 @@ export const heroCopy = {
   introMid: ', ',
   introItalicTwo: 'building things',
   introAfter:
-    ", and getting involved wherever there's something interesting to learn. I enjoy moving between code, ideas, products and people — basically, I don't really believe in staying inside one box.",
+    ", and getting involved wherever there's something interesting to learn. I enjoy moving between code, ideas, products and people, basically, I don't really believe in staying inside one box.",
 }
 
 export const navLinks = [

@@ -79,7 +79,7 @@ export function CollegeChapterBlock() {
             className="relative mt-6 ml-3 w-[88%] max-w-[380px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
           >
             <TapeStrip className="-top-5 left-1/2 -ml-8 bg-lilac/65" />
-            <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[9/11] w-full object-cover" style={{ objectPosition: 'center 42%' }} />
+            <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[9/10] w-full object-cover" style={{ objectPosition: 'center 46%' }} />
             <figcaption className="font-script absolute bottom-2 right-3 text-[18px] leading-none text-ink/65">
               grateful for this chapter ♡
             </figcaption>
@@ -99,36 +99,36 @@ export function CollegeChapterBlock() {
             </p>
             <div className="mt-5 space-y-4 text-[14.5px] leading-[1.62] text-ink/75 sm:text-[15.5px]">
               <p>
-                College taught me much more than computer engineering. I usually found myself taking the lead when it
-                came to subject projects — figuring out what needed to be done, dividing the work, bringing ideas
-                together, and making sure we actually finished what we started.
+                College taught me much more than computer engineering. I usually found myself taking the lead on
+                subject projects, and enjoyed the process behind the work just as much as the output.
               </p>
               <p>
-                Those projects taught me how much I enjoy the process around the work too — turning a loose idea into
-                a plan, collaborating with people, and seeing it through to something finished.
+                Outside of coursework, I liked actually building things — small tools, automations, and half-working
+                prototypes that taught me more about engineering than any syllabus did. Working in teams on these
+                pushed me to communicate clearly, split work sensibly, and stay accountable when things didn't go as
+                planned.
               </p>
               <p>
-                And somewhere in my first year, I also started solving mathematics problems on Photomath for a little
-                extra earning. I ended up guiding 100+ students through mathematical problem-solving and concept
-                clarification. What started as a small side thing quietly taught me how important it is to break down
-                complicated things simply, one clear step at a time.
+                And somewhere in my first year, I also started tutoring on Photomath — a small side hustle that
+                taught me how to break down complicated things simply, one step at a time.
               </p>
             </div>
-            <blockquote className="mt-5 border-t border-lavender-deep/35 pt-3 font-script text-[20px] leading-[1.15] text-ink/75 sm:text-[23px]">
+            <blockquote className="mt-6 border-t border-lavender-deep/35 pt-3 font-script text-[20px] leading-[1.15] text-ink/75 sm:text-[23px]">
               I came to college to become an engineer.
               <br />
               I left knowing I liked building much more than just software.
             </blockquote>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-7 grid gap-4 sm:grid-cols-3">
             <HighlightCard title="PROJECTS" className="-rotate-1 bg-[#F4DCE1]/70">
               usually the one turning ideas into finished work
             </HighlightCard>
-            <HighlightCard title="PHOTOMATH" className="-rotate-1 bg-[#EEE4F7]">
-              <span className="font-serif text-[19px] leading-none text-lavender-deep">100+ students</span>
-              <br />
-              first-year side quest in making maths clearer
+            <HighlightCard title="PLANNING" className="rotate-1 bg-[#EEE4F7]">
+              turning a loose idea into an actual plan
+            </HighlightCard>
+            <HighlightCard title="TEAMWORK" className="-rotate-1 bg-[#F7F0D6]">
+              collaborating with people to see it through
             </HighlightCard>
           </div>
         </motion.section>

@@ -96,7 +96,7 @@ export function MeetSection() {
             <div className="mt-4 space-y-3.5 text-[16.5px] leading-relaxed text-ink/80">
               <p>I&apos;m a software engineer who likes working where engineering, AI and product overlap.</p>
               <p>
-                With Python, Flask/FastAPI, React and TypeScript, I build across the stack — from frontend
+                With Python, Flask/FastAPI, React and TypeScript, I build across the stack, from frontend
                 experiences and backend APIs to AI-powered systems, RAG workflows and the infrastructure that
                 keeps them running. I enjoy taking an idea into something people can actually use.
               </p>
