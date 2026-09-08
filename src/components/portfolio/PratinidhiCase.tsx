@@ -27,7 +27,7 @@ const notes = [
 
 export function PratinidhiCase() {
   return (
-    <section id="work" className="relative overflow-hidden bg-[#F8E4E8] text-ink">
+    <section id="work" className="relative overflow-hidden bg-[#F5D4DB] text-ink">
       <motion.span
         aria-hidden="true"
         initial={{ opacity: 0 }}
@@ -62,7 +62,7 @@ export function PratinidhiCase() {
             >
               <CurlyArrowDoodle className="h-6 w-6" />
             </motion.span>
-            <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-ink/55"><span>Selected work</span><span className="h-px w-9 bg-ink/25" /><span>{pratinidhi.number}</span></div>
+            <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-ink/55"><span>Work at Orchestrix Technologies</span><span className="h-px w-9 bg-ink/25" /><span>{pratinidhi.number}</span></div>
             <h2 className="mt-8 whitespace-nowrap font-serif text-[clamp(2.35rem,3.6vw,4.4rem)] leading-[0.9] tracking-[-0.055em] text-ink">Pratinidhi <em className="font-normal">AI</em></h2>
             <p className="mt-7 text-[10px] font-bold uppercase tracking-[0.23em] text-[#8a4f5e] sm:text-[11px]">AI agent &amp; CRM workflow platform</p>
             <div className="mt-6 max-w-[25rem] space-y-5 text-[14px] leading-7 text-ink/75 sm:text-[15px]">
@@ -70,7 +70,7 @@ export function PratinidhiCase() {
               <p>Worked closely with the founding team on end-to-end product delivery, translating business requirements into production-ready frontend and backend features, while also contributing to product decisions, customer-facing problem solving and integrations.</p>
             </div>
             <div className="mt-8 flex max-w-md flex-wrap gap-2">
-              {['Python / Flask', 'React / TypeScript', 'Firebase', 'LLM APIs', 'RAG', 'Webhooks'].map((tech) => <span key={tech} className="rounded-full border border-ink/15 bg-white/45 px-3 py-1.5 text-[10px] font-medium text-ink/65">{tech}</span>)}
+              {['Python / Flask', 'React / TypeScript', 'AI Agents', 'LLM APIs', 'RAG', 'Firebase / Firestore', 'Webhooks', 'Function Calling', 'Semantic Search', 'Tailwind CSS', 'REST APIs', 'Embeddings'].map((tech) => <span key={tech} className="rounded-full border border-ink/15 bg-white/45 px-3 py-1.5 text-[10px] font-medium text-ink/65">{tech}</span>)}
             </div>
           </motion.div>
 

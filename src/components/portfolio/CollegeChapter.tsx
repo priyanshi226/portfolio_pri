@@ -111,10 +111,10 @@ export function CollegeChapterBlock() {
             <div className="mt-5 space-y-4 text-[14.5px] leading-[1.62] text-ink/75 sm:text-[15.5px]">
               <p>
                 College taught me much more than computer engineering. I usually found myself taking the lead on
-                subject projects, and enjoyed the process behind the work just as much as the output.
+                semester projects, and enjoyed the process behind the work just as much as the output.
               </p>
               <p>
-                Outside of coursework, I liked actually building things — small tools, automations, and half-working
+                Outside of coursework, I liked actually building things, small tools, automations, and half-working
                 prototypes that taught me more about engineering than any syllabus did. Working in teams on these
                 pushed me to communicate clearly, split work sensibly, and stay accountable when things didn't go as
                 planned.

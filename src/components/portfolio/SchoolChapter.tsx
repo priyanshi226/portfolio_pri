@@ -155,7 +155,7 @@ export function SchoolChapterBlock() {
             </ul>
           </motion.div>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -163,7 +163,7 @@ export function SchoolChapterBlock() {
             className="font-script ml-auto mt-3 max-w-[185px] text-right text-[17px] leading-[1.05] text-ink/60"
           >
             little wins, bigger motivation <span className="text-blush">♡</span>
-          </motion.p>
+          </motion.p> */}
         </div>
       </div>
     </article>

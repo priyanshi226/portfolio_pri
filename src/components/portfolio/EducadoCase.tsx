@@ -52,7 +52,7 @@ export function EducadoCase() {
       <div className="mx-auto flex w-full max-w-[1420px] min-h-[min(820px,100svh)] items-center px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(420px,1fr)_minmax(460px,1fr)] lg:gap-16 xl:gap-20">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.7 }} className="relative mx-auto w-full max-w-[400px]">
-            <p className="mb-10 flex items-center gap-2.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-ink/40"><span>Selected work</span><span className="h-px w-7 bg-ink/20" /><span>{educado.number}</span></p>
+            <p className="mb-10 flex items-center gap-2.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-ink/40"><span>Work at Orchestrix Technologies</span><span className="h-px w-7 bg-ink/20" /><span>{educado.number}</span></p>
 
             <div className="relative mx-auto h-[360px] w-[220px] sm:h-[440px] sm:w-[270px] lg:h-[500px] lg:w-[310px]">
               {notes.map((note, i) => (
@@ -107,7 +107,7 @@ export function EducadoCase() {
               {features.map(({ icon: Icon, title, body }, index) => <motion.div key={title} initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.45, delay: 0.14 + index * 0.08 }} className="grid grid-cols-[30px_1fr] gap-4 py-3.5 sm:grid-cols-[34px_1fr] sm:gap-5"><span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#eee7d7] text-ink/70"><Icon size={14} strokeWidth={1.7} /></span><div><h3 className="text-[12px] font-bold uppercase tracking-[0.08em] text-ink/80">{title}</h3><p className="mt-0.5 text-[12px] leading-5 text-ink/58">{body}</p></div></motion.div>)}
             </div>
             <div className="mt-6 flex flex-wrap gap-2">
-              {['Python', 'FastAPI', 'Firebase', 'Redis', 'AWS', 'RAG', 'FAISS', 'LangChain', 'OpenAI'].map((tech) => <span key={tech} className="rounded-full border border-ink/15 bg-white/45 px-3 py-1.5 text-[10px] font-medium text-ink/60">{tech}</span>)}
+              {['Python', 'FastAPI', 'Firebase Auth / Firestore', 'Redis', 'RAG', 'FAISS', 'LangChain', 'OpenAI', 'Embeddings', 'Razorpay', 'REST APIs', 'AWS'].map((tech) => <span key={tech} className="rounded-full border border-ink/15 bg-white/45 px-3 py-1.5 text-[10px] font-medium text-ink/60">{tech}</span>)}
             </div>
           </motion.div>
         </div>

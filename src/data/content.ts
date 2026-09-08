@@ -24,8 +24,8 @@ export const heroCopy = {
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Journey', href: '#journey' },
   { label: 'Work', href: '#work' },
+  { label: 'Journey', href: '#journey' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -41,7 +41,7 @@ export const schoolChapter = {
   tagline: 'small town, big dreams',
   paragraphs: [
     'I grew up in a small town, where most of my early education happened. It was a quiet, close-knit place that gave me a strong sense of curiosity and independence. I studied at S.D. Public School, where I was constantly surrounded by supportive teachers, a few crazy friends, and countless opportunities to explore, ask questions and discover what I loved.',
-    "School was more than just academics — it was where I first learnt discipline, problem-solving, and how to keep showing up, even when things felt challenging. Those years shaped the person I am today, and I'm really grateful for that.",
+    "School was more than just academics, it was where I first learnt discipline, problem-solving, and how to keep showing up, even when things felt challenging. Those years shaped the person I am today, and I'm really grateful for that.",
   ],
   quote: 'A small town, but a very big part of who I am today.',
   stat: '92.8%',
@@ -50,11 +50,11 @@ export const schoolChapter = {
   beganAnnotation: ['where', 'it all', 'began'],
   thingsILoved: ['Maths', 'Problem solving', 'Science', 'Competitions', 'Exploring new things'],
   olympiad: {
-    heading: 'Olympiads',
+    heading: 'little wins, bigger motivation',
     points: [
-      'Won a few medals in Maths Olympiads along the way',
-      'The thrill of solving tough problems has stayed with me ever since!',
-    ],
+      'Won medals across Mathematics, General Knowledge, and Science Olympiads',
+'Finished school with a 92.8% in Class 12, a good reminder that curiosity and consistency go a long way',
+     ],
   },
   littleWinsNote: 'little wins, bigger motivation',
   collectingNote: 'she was already collecting achievements 👀',
@@ -104,7 +104,7 @@ export const pratinidhi = {
   metricLabel: 'leads moved through the platform\'s workflows',
   channelCount: '5',
   channelLabel: 'communication channels unified into one pipeline',
-  tech: ['React.js', 'JavaScript', 'REST APIs', 'Webhooks', 'RAG', 'Embeddings', 'Semantic Search', 'LLM APIs'],
+  tech: ['Python / Flask', 'React / TypeScript', 'AI Agents', 'LLM APIs', 'RAG', 'Firebase / Firestore', 'Webhooks', 'Function Calling', 'Semantic Search', 'Tailwind CSS', 'REST APIs', 'Embeddings'],
   screenshot: asset('pratinidhi-laptop.png'),
   screenshotAlt: 'Pratinidhi AI CRM dashboard displayed on a laptop',
 }
@@ -138,7 +138,7 @@ export const educado = {
   metric: '60+',
   metricLabel: 'APIs built and shipped',
   categories: ['AI Tutoring', 'Assessments', 'Learner Progress', 'Analytics', 'Subscriptions'],
-  tech: ['Python', 'FastAPI', 'Firebase Auth', 'Firestore', 'Redis', 'RAG', 'FAISS', 'LangChain', 'OpenAI'],
+  tech: ['Python', 'FastAPI', 'Firebase Auth / Firestore', 'Redis', 'RAG', 'FAISS', 'LangChain', 'OpenAI', 'Embeddings', 'Razorpay', 'REST APIs', 'AWS'],
   screenshot: asset('phone_img.jpeg'),
   screenshotAlt: 'Educado AI mobile app',
 }
