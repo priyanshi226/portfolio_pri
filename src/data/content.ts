@@ -161,7 +161,6 @@ export const beyondResume = {
       tone: 'yellow',
       rotate: '-rotate-1',
       span: 'lg:col-span-2',
-      proofHref: 'https://www.instagram.com/educado_ai_sat?stkn=dXgzdjRicWs3cmZv',
     },
     {
       title: 'Photomath',
@@ -181,6 +180,8 @@ export const beyondResume = {
       tone: 'lavender',
       rotate: '-rotate-1',
       span: 'lg:col-span-2',
+      proofHref: 'https://www.instagram.com/educado_ai_sat?stkn=dXgzdjRicWs3cmZv',
+      proofLabel: 'view content',
     },
     {
       title: 'Pratinidhi AI Cohorts',

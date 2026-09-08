@@ -77,10 +77,10 @@ export function CollegeChapterBlock() {
             whileInView={{ opacity: 1, y: 0, rotate: -2 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mt-6 ml-3 w-[88%] max-w-[380px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
+            className="relative mt-6 ml-3 w-[92%] max-w-[420px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-6"
           >
             <TapeStrip className="-top-5 left-1/2 -ml-8 bg-white/80" />
-            <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[9/10] w-full object-cover" style={{ objectPosition: 'center 46%' }} />
+            <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[5/4] w-full object-cover" style={{ objectPosition: 'center 28%' }} />
             <figcaption className="font-script absolute bottom-2 right-3 text-[18px] leading-none text-ink/65">
               grateful for this chapter ♡
             </figcaption>
@@ -119,10 +119,7 @@ export function CollegeChapterBlock() {
                 pushed me to communicate clearly, split work sensibly, and stay accountable when things didn't go as
                 planned.
               </p>
-              <p>
-                And somewhere in my first year, I also started tutoring on Photomath — a small side hustle that
-                taught me how to break down complicated things simply, one step at a time.
-              </p>
+              
             </div>
             <blockquote className="mt-6 border-t border-lavender-deep/35 pt-3 font-script text-[20px] leading-[1.15] text-ink/75 sm:text-[23px]">
               I came to college to become an engineer.

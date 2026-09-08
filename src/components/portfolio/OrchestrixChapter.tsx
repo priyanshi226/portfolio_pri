@@ -106,7 +106,7 @@ export function OrchestrixChapterBlock() {
             </p>
 
             <p>
-              I work closely with the team to turn business requirements into production-ready solutions — from
+              I work closely with the team to turn business requirements into production-ready solutions, from
               frontend experiences and backend APIs to debugging, integrations, and feature improvements.
             </p>
 
@@ -116,7 +116,7 @@ export function OrchestrixChapterBlock() {
             </p>
 
             <p>
-              Along the way, I've also gained a stronger understanding of product thinking — balancing technical
+              Along the way, I've also gained a stronger understanding of product thinking, balancing technical
               decisions with user needs, business goals, and the practical realities of shipping and improving
               software.
             </p>

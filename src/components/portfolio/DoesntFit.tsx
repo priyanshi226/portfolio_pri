@@ -113,7 +113,7 @@ export function DoesntFit() {
                     rel="noreferrer"
                     className="group mt-3 inline-flex items-center gap-1 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink/50 transition-colors hover:text-ink/80"
                   >
-                    view proof
+                    {card.proofLabel ?? 'view certificate'}
                     <ArrowUpRight size={12} strokeWidth={2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 )}
