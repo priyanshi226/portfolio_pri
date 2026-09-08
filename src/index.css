@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300,0,0;0,9..144,400,0,0;0,9..144,500,0,0;0,9..144,600,0,0;0,9..144,700,0,0;0,9..144,900,0,0;0,9..144,900,100,1;1,9..144,400,0,0;1,9..144,500,0,0;1,9..144,600,0,0&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -58,24 +58,6 @@
 
   .polaroid {
     @apply bg-white p-2 pb-6 border border-line/70 shadow-[0_12px_24px_-10px_rgba(20,18,12,0.35)];
-  }
-
-  /* seamless ticker */
-  .ticker-track {
-    display: flex;
-    width: max-content;
-    animation: ticker-scroll 28s linear infinite;
-  }
-
-  @keyframes ticker-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .ticker-track {
-      animation: none;
-    }
   }
 
   .text-stroke {

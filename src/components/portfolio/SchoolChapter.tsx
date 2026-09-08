@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { schoolChapter } from '@/data/content'
-import { CheckMark, MedalDoodle, SchoolBuildingIllustration, TrophyDoodle } from './Doodles'
+import { ArrowDoodle, CheckMark, MedalDoodle, SchoolBuildingIllustration } from './Doodles'
 
 function TapeStrip({ className }: { className?: string }) {
   return (
@@ -22,24 +22,23 @@ const fadeIn = {
 
 export function SchoolChapterBlock() {
   return (
-    <div className="relative pl-10 sm:pl-0">
-      {/* timeline node */}
+    <article className="relative pl-9 sm:pl-0">
       <motion.span
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.6 }}
         transition={{ duration: 0.4 }}
-        className="absolute left-3 top-1 z-10 flex h-4 w-4 -translate-x-1/2 items-center justify-center rounded-full border-2 border-ink bg-lavender sm:left-1/2"
+        className="absolute left-3 top-1 z-20 h-4 w-4 -translate-x-1/2 rounded-full border-2 border-ink bg-lavender sm:left-1/2"
+        aria-hidden="true"
       />
 
-      <div className="grid gap-14 sm:grid-cols-2 sm:gap-10 lg:gap-16">
-        {/* LEFT — school story */}
-        <div className="sm:pr-4">
+      <div className="grid items-start gap-10 sm:grid-cols-2 sm:gap-14 lg:gap-20">
+        <div className="sm:pr-5">
           <motion.p
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0)}
             viewport={{ once: true, amount: 0.4 }}
-            className="font-script text-2xl text-ink/70"
+            className="inline-flex rounded-full bg-lilac/35 px-4 py-0.5 text-[13px] font-semibold tracking-[0.14em] text-ink/65"
           >
             {schoolChapter.years}
           </motion.p>
@@ -48,7 +47,7 @@ export function SchoolChapterBlock() {
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0.08)}
             viewport={{ once: true, amount: 0.4 }}
-            className="mt-1 font-serif text-[34px] leading-[1.05] tracking-tight text-ink sm:text-[42px]"
+            className="mt-4 font-serif text-[38px] leading-[0.98] tracking-tight text-ink sm:text-[48px] lg:text-[54px]"
           >
             {schoolChapter.heading}
           </motion.h3>
@@ -57,7 +56,7 @@ export function SchoolChapterBlock() {
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0.16)}
             viewport={{ once: true, amount: 0.4 }}
-            className="font-script mt-1 text-xl text-lavender-deep"
+            className="font-script mt-2 text-[24px] leading-none text-lavender-deep sm:text-[27px]"
           >
             {schoolChapter.tagline} <span className="text-blush">♡</span>
           </motion.p>
@@ -66,7 +65,7 @@ export function SchoolChapterBlock() {
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0.28)}
             viewport={{ once: true, amount: 0.3 }}
-            className="mt-4 max-w-[46ch] space-y-3.5 text-[15.5px] leading-relaxed text-ink/80"
+            className="mt-6 max-w-[48ch] space-y-4 text-[15px] leading-[1.72] text-ink/80 sm:text-[15.5px]"
           >
             <p>
               I grew up in a small town, where most of my early education happened. It was a quiet, close-knit
@@ -80,139 +79,93 @@ export function SchoolChapterBlock() {
             <p>{schoolChapter.paragraphs[1]}</p>
           </motion.div>
 
-          <motion.div
+          <motion.blockquote
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0.42)}
             viewport={{ once: true, amount: 0.4 }}
-            className="mt-5 max-w-[42ch] border-l-2 border-lavender-deep/50 pl-4"
+            className="mt-6 max-w-[38ch] border-l-2 border-lavender-deep/55 pl-4 font-serif text-[19px] italic leading-snug text-ink/80 sm:text-[22px]"
           >
-            <p className="font-script text-xl italic leading-snug text-ink/75">"{schoolChapter.quote}"</p>
-          </motion.div>
+            “{schoolChapter.quote}”
+          </motion.blockquote>
         </div>
 
-        {/* RIGHT — scrapbook cluster */}
-        <div className="relative mx-auto w-full max-w-[300px] pt-2 sm:mx-0 sm:max-w-none sm:pl-6">
-          {/* "where it all began" — desktop-only floating annotation */}
+        <div className="relative mx-auto w-full max-w-[430px] pb-1 pt-1 sm:mx-0 sm:max-w-none sm:pl-2">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -8 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="absolute -left-2 top-6 hidden text-right sm:block"
+            transition={{ duration: 0.5, delay: 0.18 }}
+            className="mb-1 flex items-end justify-end gap-1 pr-1 text-ink/65 sm:pr-3"
           >
-            <p className="font-script text-lg leading-[1.15] text-ink/55">
-              where
-              <br />
-              it all
-              <br />
-              began <span className="text-blush">♡</span>
-            </p>
+            <ArrowDoodle className="h-6 w-11 -rotate-[18deg] text-lavender-deep" />
+            <p className="font-script text-[20px] leading-none">{schoolChapter.schoolName}</p>
           </motion.div>
 
-          {/* caption above the photo */}
-          <motion.p
-            initial={fadeIn.hidden}
-            whileInView={fadeIn.show(0.2)}
-            viewport={{ once: true, amount: 0.4 }}
-            className="font-script mx-auto w-fit rotate-1 text-lg text-ink/70 sm:ml-auto sm:mr-10"
-          >
-            ↘ {schoolChapter.schoolName} <span className="text-blush">♡</span>
-          </motion.p>
-
-          {/* photo, taped */}
-          <motion.div
+          <motion.figure
             initial={{ opacity: 0, y: -14, rotate: 4 }}
             whileInView={{ opacity: 1, y: 0, rotate: -2 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto mt-2 w-full max-w-[260px] border-4 border-paper bg-paper shadow-[0_18px_36px_-16px_rgba(20,18,12,0.45)] sm:ml-auto sm:mr-10"
+            transition={{ duration: 0.7, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-0 mr-auto w-[78%] max-w-[342px] border-4 border-paper bg-paper p-1 shadow-[0_18px_36px_-16px_rgba(20,18,12,0.45)] sm:ml-5"
           >
-            <TapeStrip className="-top-3 left-1/2 -ml-8 -rotate-3" />
-            <div className="aspect-[4/3] w-full overflow-hidden bg-lavender/30">
+            <TapeStrip className="-top-4 left-1/2 -ml-8 -rotate-3 bg-lilac/65" />
+            <div className="aspect-[4/3] overflow-hidden bg-lavender/30">
               <SchoolBuildingIllustration />
             </div>
+          </motion.figure>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.6, rotate: -12 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: -8 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              className="absolute -bottom-4 -left-4 flex h-14 w-14 flex-col items-center justify-center rounded-full border-2 border-mustard bg-paper text-center shadow-sm"
-            >
-              <p className="font-serif text-[13px] leading-none text-mustard">{schoolChapter.stat}</p>
-              <p className="mt-0.5 text-[7px] uppercase tracking-wide text-ink/50">{schoolChapter.statLabel}</p>
-            </motion.div>
-          </motion.div>
-
-          {/* things I loved sticky note */}
           <motion.div
             initial={{ opacity: 0, y: 16, rotate: 8 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 3 }}
+            whileInView={{ opacity: 1, y: 0, rotate: 2 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 mx-auto mt-8 w-[230px] bg-[#F5E9B8] p-4 shadow-[0_14px_26px_-14px_rgba(20,18,12,0.5)] sm:ml-auto sm:mr-0 sm:-mt-16"
+            transition={{ duration: 0.5, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 ml-auto -mt-10 w-[208px] bg-[#F5E9B8] p-4 shadow-[0_14px_26px_-14px_rgba(20,18,12,0.5)] sm:-mt-36 sm:mr-0"
           >
-            <TapeStrip className="-top-3 left-6 rotate-6" />
-            <p className="font-script text-lg text-ink/80">Things I loved:</p>
-            <ul className="mt-2 space-y-1.5">
+            <TapeStrip className="-top-3 left-7 rotate-6" />
+            <p className="border-b border-mustard/80 pb-1 font-script text-[20px] leading-none text-ink/85">Things I loved:</p>
+            <ul className="mt-2.5 space-y-1.5">
               {schoolChapter.thingsILoved.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-[13px] text-ink/75">
-                  <CheckMark className="w-3.5 h-3.5 shrink-0 text-ink/55" />
-                  <span className="font-script italic">{item}</span>
+                <li key={item} className="flex items-center gap-2 text-ink/75">
+                  <CheckMark className="h-4 w-4 shrink-0 text-ink/65" />
+                  <span className="font-script text-[17px] leading-none">{item}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* olympiad note */}
           <motion.div
             initial={{ opacity: 0, y: 16, rotate: -8 }}
-            whileInView={{ opacity: 1, y: 0, rotate: -2 }}
+            whileInView={{ opacity: 1, y: 0, rotate: -1 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 mx-auto -mt-3 w-[250px] bg-blush/30 p-4 shadow-[0_14px_26px_-14px_rgba(20,18,12,0.5)] sm:mr-14 sm:-mt-8"
+            transition={{ duration: 0.5, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 mt-8 w-[92%] max-w-[350px] bg-paper/80 p-5 shadow-[0_14px_26px_-14px_rgba(20,18,12,0.45)] sm:ml-5"
           >
-            <TapeStrip className="-top-3 right-6 -rotate-6" />
+            <TapeStrip className="-top-3 right-9 -rotate-6 bg-lilac/65" />
             <div className="flex items-center gap-2">
-              <MedalDoodle className="text-mustard" />
-              <p className="font-serif text-lg text-ink">{schoolChapter.olympiad.heading}</p>
+              <MedalDoodle className="h-11 w-8 text-mustard" />
+              <p className="border-b border-lavender-deep/65 pb-1 font-script text-[24px] leading-none text-ink">{schoolChapter.olympiad.heading}</p>
             </div>
-            <ul className="mt-2 space-y-1.5">
+            <ul className="mt-3 space-y-2">
               {schoolChapter.olympiad.points.map((point) => (
-                <li key={point} className="flex gap-1.5 text-[13px] leading-snug text-ink/75">
-                  <span className="text-ink/40">•</span>
+                <li key={point} className="flex gap-2 text-[14px] leading-snug text-ink/75">
+                  <span className="text-mustard">•</span>
                   {point}
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* little wins + trophy */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className="mt-4 flex items-center justify-center gap-2 sm:mr-8 sm:justify-end"
-          >
-            <TrophyDoodle className="w-6 h-6 text-mustard" />
-            <p className="font-script text-sm leading-tight text-ink/55">
-              little wins, bigger motivation <span className="text-blush">♡</span>
-            </p>
-          </motion.div>
-
-          {/* collecting achievements note */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5, delay: 1.1 }}
-            className="font-script mt-1 text-center text-sm text-ink/45 sm:mr-8 sm:text-right"
+            transition={{ duration: 0.5, delay: 0.95 }}
+            className="font-script ml-auto mt-3 max-w-[185px] text-right text-[17px] leading-[1.05] text-ink/60"
           >
-            {schoolChapter.collectingNote}
+            little wins, bigger motivation <span className="text-blush">♡</span>
           </motion.p>
         </div>
       </div>
-    </div>
+    </article>
   )
 }

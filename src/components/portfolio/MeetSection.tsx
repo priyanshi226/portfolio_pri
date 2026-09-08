@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion'
+import { Atom, Braces, Cloud, Database, Server, Sparkles } from 'lucide-react'
 import { profile } from '@/data/content'
-import { DotCluster, LoopScribble, ScallopFrame, StarDoodle, TickBurst, UnderlineDoodle } from './Doodles'
+import { ScallopFrame, UnderlineDoodle } from './Doodles'
+
+const techMarks = [
+  { label: 'Python', icon: Braces, className: 'left-14 top-0 -rotate-3 bg-[#f5e4b5]' },
+  { label: 'React', icon: Atom, className: 'left-[39%] -top-3 rotate-2 bg-[#c9edf0]' },
+  { label: 'FastAPI', icon: Server, className: 'right-3 top-1 -rotate-2 bg-[#ccebdc]' },
+  { label: 'Firebase', icon: Sparkles, className: 'left-0 top-[35%] rotate-2 bg-[#fde2c7]' },
+  { label: 'Redis', icon: Database, className: '-left-2 top-[56%] -rotate-3 bg-[#f1d2d8]' },
+  { label: 'AWS', icon: Cloud, className: 'left-1 top-[77%] rotate-2 bg-[#e1dcf4]' },
+]
 
 export function MeetSection() {
   return (
@@ -13,18 +23,7 @@ export function MeetSection() {
           transition={{ duration: 0.6 }}
           className="text-center font-serif text-[42px] tracking-tight text-ink sm:text-[58px]"
         >
-          <span className="relative inline-block">
-            MEET PRIYANSHI
-            <motion.span
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 0.7, scale: 1 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="absolute -right-6 top-0 hidden text-lavender-deep sm:block"
-            >
-              <StarDoodle className="w-4 h-4" />
-            </motion.span>
-          </span>
+          MEET PRIYANSHI
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -38,59 +37,22 @@ export function MeetSection() {
 
         <div className="mt-8 grid gap-10 sm:mt-10 sm:grid-cols-[1fr_1.15fr] sm:items-start sm:gap-8">
           {/* LEFT — scrapbook photograph */}
-          <div className="relative mx-auto w-[260px] pl-7 pt-4 sm:mx-0 sm:w-full sm:max-w-[420px] sm:pl-11 sm:pt-8">
-            {/* hand-drawn arrow, upper-left */}
-            <motion.svg
-              viewBox="0 0 70 70"
-              className="absolute left-0 -top-3 h-16 w-16 text-ink/60 sm:-top-5"
-              fill="none"
-              aria-hidden="true"
-            >
-              <motion.path
-                d="M3 6C0 16 8 20 5 28C2 36 12 34 10 42C8 50 22 48 42 56"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 1 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.9, delay: 0.55, ease: 'easeInOut' }}
-              />
-              <motion.path
-                d="M28 52L42 56L36 42"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 1 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.3, delay: 1.35 }}
-              />
-            </motion.svg>
-
-            {/* tiny dot cluster, near the arrow */}
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 0.6 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.5 }}
-              className="absolute left-14 top-0 hidden text-ink/40 sm:block"
-            >
-              <DotCluster className="w-5 h-3" />
-            </motion.span>
-
-            {/* vertical annotation, in the left gutter */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              style={{ writingMode: 'vertical-rl' }}
-              className="font-script pointer-events-none absolute bottom-4 left-0 hidden rotate-180 text-lg text-ink/45 sm:block"
-            >
-              i'm so happy you're here!
-            </motion.p>
+          <div className="relative mx-auto w-[244px] pl-7 pt-10 sm:mx-0 sm:w-full sm:max-w-[370px] sm:pl-11 sm:pt-12">
+            {/* A small, top-and-left-only stack of technologies. */}
+            {techMarks.map(({ label, icon: Icon, className }, index) => (
+              <motion.div
+                key={label}
+                initial={{ opacity: 0, scale: 0.85, y: 6 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.45 }}
+                transition={{ duration: 0.35, delay: 0.4 + index * 0.07 }}
+                className={`absolute z-10 flex h-9 w-9 items-center justify-center border border-white/60 shadow-[2px_4px_9px_rgba(20,18,12,0.13)] sm:h-10 sm:w-10 ${className}`}
+                aria-label={label}
+                title={label}
+              >
+                <Icon size={18} strokeWidth={1.7} className="text-ink/75 sm:h-5 sm:w-5" aria-hidden="true" />
+              </motion.div>
+            ))}
 
             {/* frame + photo, single tilted unit */}
             <div className="relative">
@@ -114,75 +76,12 @@ export function MeetSection() {
                 <img
                   src={profile.portrait}
                   alt="Priyanshi smiling"
-                  className="h-[326px] w-full object-cover sm:h-[374px]"
+                  className="h-[285px] w-full object-cover sm:h-[326px]"
                   loading="lazy"
                 />
               </motion.div>
             </div>
 
-            {/* handwritten annotation near top-right of photo */}
-            <motion.p
-              initial={{ opacity: 0, y: -6 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.05 }}
-              className="font-script absolute right-0 top-6 rotate-4 text-xl text-ink/65 sm:-right-5 sm:top-8"
-            >
-              i'm so happy you're here!
-            </motion.p>
-
-            {/* small second note, lower-left of the photo */}
-            <motion.p
-              initial={{ opacity: 0, y: 6 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.25 }}
-              className="font-script absolute left-16 -bottom-12 -rotate-3 text-base text-lavender-deep/80 sm:left-20 sm:-bottom-10 sm:text-lg"
-            >
-              (this one's a favourite)
-            </motion.p>
-
-            {/* tiny loop scribble, lower edge of the photo */}
-            <motion.span
-              initial={{ opacity: 0, scale: 0.6, rotate: -10 }}
-              whileInView={{ opacity: 0.75, scale: 1, rotate: 6 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
-              className="absolute right-3 -bottom-3 text-mustard sm:right-6"
-            >
-              <LoopScribble />
-            </motion.span>
-
-            {/* decorative tick bursts */}
-            <motion.span
-              initial={{ opacity: 0, scale: 0.6 }}
-              whileInView={{ opacity: 0.8, scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.15 }}
-              className="absolute -right-3 bottom-32 hidden -rotate-6 text-lavender-deep sm:block"
-            >
-              <TickBurst />
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, scale: 0.6 }}
-              whileInView={{ opacity: 0.7 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-              className="absolute left-16 -top-5 hidden rotate-12 text-lavender-deep sm:block"
-            >
-              <TickBurst className="w-6 h-5" />
-            </motion.span>
-
-            {/* tiny star, upper area of the frame */}
-            <motion.span
-              initial={{ opacity: 0, scale: 0.4 }}
-              whileInView={{ opacity: 0.75, scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.5, delay: 1.55 }}
-              className="absolute right-10 top-2 hidden text-mustard sm:block"
-            >
-              <StarDoodle className="w-3.5 h-3.5" />
-            </motion.span>
           </div>
 
           {/* RIGHT — editorial text */}
@@ -216,13 +115,19 @@ export function MeetSection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mt-4 space-y-3.5 text-[16.5px] leading-relaxed text-ink/80"
             >
-              <p>I started out as a student who liked solving problems.</p>
               <p>
-                Somewhere along the way, I discovered that I liked building things, explaining things, coming up
-                with ideas, working with people and figuring out how things work just as much as I liked writing
-                code.
+                I&apos;m a software engineer who likes working where engineering, AI and product overlap.
               </p>
-              <p>So I stopped trying to fit myself into one box.</p>
+              <p>
+                With Python, Flask/FastAPI, React and TypeScript, I build across the stack — from frontend
+                experiences and backend APIs to AI-powered systems, RAG workflows and the infrastructure that
+                keeps them running. I enjoy taking an idea into something people can actually use.
+              </p>
+              <p>
+                Beyond the code, I like understanding the problem first: thinking through product decisions,
+                working with founders and teams, explaining technical ideas, and figuring out what truly needs to
+                be built.
+              </p>
             </motion.div>
 
             <motion.div
@@ -230,17 +135,8 @@ export function MeetSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="relative mt-5 border-l-2 border-ink/15 pl-4"
+              className="mt-5 border-l-2 border-ink/15 pl-4"
             >
-              <motion.span
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 0.7, scale: 1 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5, delay: 1.3 }}
-                className="absolute -left-3 -top-3 text-lavender-deep"
-              >
-                <StarDoodle className="w-3.5 h-3.5" />
-              </motion.span>
               <p className="font-serif text-[21px] italic leading-snug text-ink sm:text-[25px]">
                 I didn't want to only write code.
                 <br />
@@ -260,27 +156,6 @@ export function MeetSection() {
                 </span>
               </p>
             </motion.div>
-
-            <div className="mt-6 flex items-center gap-3">
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.6, delay: 1.15 }}
-                className="font-script -rotate-1 text-2xl text-ink/60 sm:text-[26px]"
-              >
-                apparently one job title wasn't enough →
-              </motion.p>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.6 }}
-                whileInView={{ opacity: 0.7, scale: 1 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5, delay: 1.4 }}
-                className="hidden text-lavender-deep sm:block"
-              >
-                <LoopScribble className="w-5 h-4" />
-              </motion.span>
-            </div>
           </div>
         </div>
       </div>

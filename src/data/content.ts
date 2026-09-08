@@ -100,76 +100,13 @@ export const qaChapter = {
 }
 
 // ---------------------------------------------------------------------------
-// Orchestrix
-// ---------------------------------------------------------------------------
-
-export const orchestrix = {
-  years: '2025 — NOW',
-  role: 'SOFTWARE ENGINEER',
-  company: 'ORCHESTRIX TECHNOLOGIES',
-  intro: 'THEN I JOINED ORCHESTRIX.',
-  introSub: 'AND SOMEHOW ENDED UP HELPING BUILD MUCH MORE THAN THE CODE.',
-  origin: "I joined Orchestrix at an early stage and got to experience what it means to build alongside a growing company. I wasn't only watching a product being built. I got to be part of the process.",
-  storyHeading: 'I CAME IN TO WRITE CODE.',
-  storySub: 'SOMEHOW, I ENDED UP HELPING BUILD THE THING AROUND THE CODE TOO.',
-  storyBody: "I joined as an intern. Somewhere along the way, the role became much bigger than writing code. I worked closely with the founding team, contributed ideas, got involved in content and communication, helped people understand the product, and became someone different parts of the company could come to when something needed figuring out. I wasn't trying to collect job titles.",
-  storyEmphasis: 'I WAS TRYING TO LEARN.',
-}
-
-export const hats = [
-  {
-    label: 'BUILT',
-    body: 'Building production-ready frontend and backend features and AI-powered systems.',
-  },
-  {
-    label: 'IDEATED',
-    body: 'Contributing ideas around products, features, workflows and ways to solve problems.',
-  },
-  {
-    label: 'WORKED WITH FOUNDERS',
-    body: 'Working directly with the founding team and understanding the business context behind what we were building.',
-  },
-  {
-    label: 'HELPED SALES',
-    body: 'Being a go-to technical/product person for sales — helping answer technical questions, explain the product and make the technology easier to communicate.',
-  },
-  {
-    label: 'CONTENT',
-    body: 'Getting involved in content and communication because building a product also means figuring out how to explain it.',
-  },
-  {
-    label: 'CUSTOMER-SIDE PROBLEM SOLVING',
-    body: 'Helping when customer-facing problems needed someone who understood both the product and the technology.',
-  },
-  {
-    label: 'LEARNED',
-    body: 'Taking opportunities outside the obvious engineering path because every new responsibility was another way to understand how a company actually works.',
-  },
-]
-
-export const goToNotes = [
-  'Can you help me understand this?',
-  'Can we build this?',
-  'What if we tried this?',
-  'How does this actually work?',
-  'Can you explain this?',
-  'Could the AI do this?',
-  "Let's figure it out.",
-]
-
-export const curiosity = {
-  heading: "I DON'T THINK CURIOSITY BELONGS TO ONE JOB DESCRIPTION.",
-  body: "If there's something interesting to learn, I want to understand it. If there's a problem I can help solve, I'll try. If I don't know how something works, I'll figure it out. That's probably why my role became broader than the words 'Software Engineer' suggest.",
-}
-
-// ---------------------------------------------------------------------------
 // Projects
 // ---------------------------------------------------------------------------
 
 export const pratinidhi = {
   number: '01',
   name: 'PRATINIDHI AI',
-  subtitle: 'AI AGENT × CRM × AUTOMATION',
+  subtitle: 'AI AGENT AND CRM WORKFLOW PLATFORM',
   role: 'SOFTWARE ENGINEER / FULL-STACK ENGINEERING CONTRIBUTOR',
   problem: 'Local and growing businesses were fielding customer conversations across five different channels with no unified way to qualify, route or follow up on a lead.',
   built: 'A web dashboard for managing conversation pipelines and CRM stages in React.js, plus a modular backend (controllers / services / repositories) covering intake, qualification, routing and lifecycle tracking of customer interactions — with automation workflow triggers and structured logging for production observability.',
@@ -182,8 +119,8 @@ export const pratinidhi = {
   channelCount: '5',
   channelLabel: 'communication channels unified into one pipeline',
   tech: ['React.js', 'JavaScript', 'REST APIs', 'Webhooks', 'RAG', 'Embeddings', 'Semantic Search', 'LLM APIs'],
-  screenshot: asset('desktop_img.jpeg'),
-  screenshotAlt: 'Pratinidhi AI product dashboard',
+  screenshot: asset('pratinidhi-laptop-transparent.png'),
+  screenshotAlt: 'Pratinidhi AI CRM dashboard displayed on a laptop',
 }
 
 export const educado = {

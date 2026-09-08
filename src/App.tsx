@@ -4,10 +4,6 @@ import { Header } from '@/components/portfolio/Header'
 import { Hero } from '@/components/portfolio/Hero'
 import { MeetSection } from '@/components/portfolio/MeetSection'
 import { JourneyTimeline } from '@/components/portfolio/JourneyTimeline'
-import { OrchestrixStory } from '@/components/portfolio/OrchestrixStory'
-import { ManyHats } from '@/components/portfolio/ManyHats'
-import { GoToPerson } from '@/components/portfolio/GoToPerson'
-import { ProjectsIntro } from '@/components/portfolio/ProjectsIntro'
 import { PratinidhiCase } from '@/components/portfolio/PratinidhiCase'
 import { EducadoCase } from '@/components/portfolio/EducadoCase'
 import { DoesntFit } from '@/components/portfolio/DoesntFit'
@@ -34,16 +30,7 @@ function App() {
         <MeetSection />
         <WavyDivider topColor={c.paper} bottomColor={c.lavender} />
         <JourneyTimeline />
-        <WavyDivider topColor={c.lavender} bottomColor={c.olive} />
-        <OrchestrixStory />
-        <WavyDivider topColor={c.olive} bottomColor={c.paper} />
-        <ManyHats />
-        <WavyDivider topColor={c.paper} bottomColor={c.mist} />
-        <GoToPerson />
-        <WavyDivider topColor={c.mist} bottomColor={c.paper} />
-        <ProjectsIntro />
         <PratinidhiCase />
-        <WavyDivider topColor={c.oliveDark} bottomColor={c.paper} />
         <EducadoCase />
         <DoesntFit />
         <WavyDivider topColor={c.paper} bottomColor={c.mist} />

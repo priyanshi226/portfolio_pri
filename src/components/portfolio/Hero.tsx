@@ -29,21 +29,33 @@ export function Hero() {
 
         {/* LEFT — Hello + intro + CTA */}
         <div className="relative z-10">
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-[92px] italic leading-none tracking-tight text-paper sm:text-[132px]"
-          >
-            Hello!
-          </motion.h1>
+          <div className="relative inline-block -rotate-2">
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              style={{ fontVariationSettings: '"SOFT" 100, "WONK" 1' }}
+              className="font-serif text-[92px] font-black not-italic leading-[0.9] tracking-tight text-paper sm:text-[132px]"
+            >
+              Hello!
+            </motion.h1>
+
+            <motion.span
+              initial={{ opacity: 0, scale: 0.4, rotate: -20 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.5, delay: 0.85, ease: 'easeOut' }}
+              className="absolute right-2 top-0 text-blush sm:right-3 sm:top-1"
+            >
+              <StarDoodle className="w-5 h-5 sm:w-7 sm:h-7" />
+            </motion.span>
+          </div>
 
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.55, ease: 'easeOut' }}
             style={{ transformOrigin: 'left' }}
-            className="-mt-2 w-[260px] text-blush sm:w-[380px]"
+            className="-mt-2 w-[260px] -rotate-2 text-blush sm:w-[380px]"
           >
             <BigSquiggle />
           </motion.div>

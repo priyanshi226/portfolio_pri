@@ -6,7 +6,10 @@
       "Bash(node -e \"console.log\\(Object.keys\\(require\\('./node_modules/lucide-react/dist/cjs/lucide-react.js'\\)\\).filter\\(k => /linked|git|mail|map|arrow|down/i.test\\(k\\)\\)\\)\")",
       "Bash(node -e ' *)",
       "Bash(chromium-cli --help)",
-      "Bash(node shot2.mjs)"
+      "Bash(node shot2.mjs)",
+      "Bash(NODE_PATH=/Users/priyanshigupta/.npm/_npx/705bc6b22212b352/node_modules node -e ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sf http://localhost:5173/portfolio_pri/)"
     ]
   }
 }
