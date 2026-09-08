@@ -1,0 +1,271 @@
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`
+
+export const profile = {
+  name: 'Priyanshi',
+  fullName: 'Priyanshi Gupta',
+  email: 'priyanshigupta0303@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/priyanshi-gupta-93750b230/',
+  github: 'https://github.com/priyanshi226',
+  resumeHref: asset('resume.pdf'),
+  portrait: asset('image.png'),
+  location: 'Bengaluru, India',
+}
+
+export const heroCopy = {
+  introLead: "It's Priyanshi!",
+  introBefore: 'A software engineer and AI builder who likes ',
+  introItalicOne: 'figuring things out',
+  introMid: ', ',
+  introItalicTwo: 'building things',
+  introAfter:
+    ", and getting involved wherever there's something interesting to learn. I enjoy moving between code, ideas, products and people — basically, I don't really believe in staying inside one box.",
+}
+
+export const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Work', href: '#work' },
+  { label: 'Contact', href: '#contact' },
+]
+
+// ---------------------------------------------------------------------------
+// Journey — chronological, school first
+// ---------------------------------------------------------------------------
+
+export const journeyIntro = 'A collection of chapters, learnings, and everything in between.'
+
+export const schoolChapter = {
+  years: '2006 – 2021',
+  heading: 'SCHOOL YEARS',
+  tagline: 'small town, big dreams',
+  paragraphs: [
+    'I grew up in a small town, where most of my early education happened. It was a quiet, close-knit place that gave me a strong sense of curiosity and independence. I studied at S.D. Public School, where I was constantly surrounded by supportive teachers, a few crazy friends, and countless opportunities to explore, ask questions and discover what I loved.',
+    "School was more than just academics — it was where I first learnt discipline, problem-solving, and how to keep showing up, even when things felt challenging. Those years shaped the person I am today, and I'm really grateful for that.",
+  ],
+  quote: 'A small town, but a very big part of who I am today.',
+  stat: '92.8%',
+  statLabel: 'final score',
+  schoolName: 'S.D. Public School',
+  beganAnnotation: ['where', 'it all', 'began'],
+  thingsILoved: ['Maths', 'Problem solving', 'Science', 'Competitions', 'Exploring new things'],
+  olympiad: {
+    heading: 'Olympiads',
+    points: [
+      'Won a few medals in Maths Olympiads along the way',
+      'The thrill of solving tough problems has stayed with me ever since!',
+    ],
+  },
+  littleWinsNote: 'little wins, bigger motivation',
+  collectingNote: 'she was already collecting achievements 👀',
+}
+
+export const collegeChapter = {
+  years: '2021 — 2025',
+  kicker: 'THE COLLEGE CHAPTER',
+  school: 'THAPAR INSTITUTE OF ENGINEERING & TECHNOLOGY',
+  degree: 'B.E. COMPUTER ENGINEERING',
+  stat: '7.63',
+  statLabel: 'CGPA',
+  milestones: [
+    { year: '2021', label: 'new chapter' },
+    { year: '2022', label: 'figuring things out' },
+    { year: '2023', label: 'learning to build' },
+    { year: '2024', label: 'things started getting serious' },
+    { year: '2025', label: "okay, what's next?" },
+  ],
+}
+
+export const photomathChapter = {
+  kicker: 'MY FIRST LITTLE SIDE QUEST',
+  title: 'MATH EXPERT @ PHOTOMATH',
+  body: "I started solving mathematics questions for a little extra earning. What started as a side thing turned into something I didn't expect — helping students understand problems instead of simply giving them answers.",
+  stat: '100+',
+  statLabel: 'students',
+  note: 'apparently explaining things counts as a skill',
+}
+
+export const qaChapter = {
+  years: 'June 2024 — August 2024',
+  kicker: 'THE "LET\'S BREAK THINGS" ERA',
+  company: '360LOGICA / SAKSOFT',
+  role: 'QUALITY ASSURANCE INTERN',
+  body: 'Two months of learning how software breaks before spending most of my time figuring out how to build it.',
+  points: [
+    'Exploratory & functional testing across web and AI-based applications',
+    'API testing and contract validation with Postman',
+    'Defect triage and lifecycle management in JIRA & TestRail',
+    'Evaluated chatbot / LLM outputs across varied prompt sets',
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// Orchestrix
+// ---------------------------------------------------------------------------
+
+export const orchestrix = {
+  years: '2025 — NOW',
+  role: 'SOFTWARE ENGINEER',
+  company: 'ORCHESTRIX TECHNOLOGIES',
+  intro: 'THEN I JOINED ORCHESTRIX.',
+  introSub: 'AND SOMEHOW ENDED UP HELPING BUILD MUCH MORE THAN THE CODE.',
+  origin: "I joined Orchestrix at an early stage and got to experience what it means to build alongside a growing company. I wasn't only watching a product being built. I got to be part of the process.",
+  storyHeading: 'I CAME IN TO WRITE CODE.',
+  storySub: 'SOMEHOW, I ENDED UP HELPING BUILD THE THING AROUND THE CODE TOO.',
+  storyBody: "I joined as an intern. Somewhere along the way, the role became much bigger than writing code. I worked closely with the founding team, contributed ideas, got involved in content and communication, helped people understand the product, and became someone different parts of the company could come to when something needed figuring out. I wasn't trying to collect job titles.",
+  storyEmphasis: 'I WAS TRYING TO LEARN.',
+}
+
+export const hats = [
+  {
+    label: 'BUILT',
+    body: 'Building production-ready frontend and backend features and AI-powered systems.',
+  },
+  {
+    label: 'IDEATED',
+    body: 'Contributing ideas around products, features, workflows and ways to solve problems.',
+  },
+  {
+    label: 'WORKED WITH FOUNDERS',
+    body: 'Working directly with the founding team and understanding the business context behind what we were building.',
+  },
+  {
+    label: 'HELPED SALES',
+    body: 'Being a go-to technical/product person for sales — helping answer technical questions, explain the product and make the technology easier to communicate.',
+  },
+  {
+    label: 'CONTENT',
+    body: 'Getting involved in content and communication because building a product also means figuring out how to explain it.',
+  },
+  {
+    label: 'CUSTOMER-SIDE PROBLEM SOLVING',
+    body: 'Helping when customer-facing problems needed someone who understood both the product and the technology.',
+  },
+  {
+    label: 'LEARNED',
+    body: 'Taking opportunities outside the obvious engineering path because every new responsibility was another way to understand how a company actually works.',
+  },
+]
+
+export const goToNotes = [
+  'Can you help me understand this?',
+  'Can we build this?',
+  'What if we tried this?',
+  'How does this actually work?',
+  'Can you explain this?',
+  'Could the AI do this?',
+  "Let's figure it out.",
+]
+
+export const curiosity = {
+  heading: "I DON'T THINK CURIOSITY BELONGS TO ONE JOB DESCRIPTION.",
+  body: "If there's something interesting to learn, I want to understand it. If there's a problem I can help solve, I'll try. If I don't know how something works, I'll figure it out. That's probably why my role became broader than the words 'Software Engineer' suggest.",
+}
+
+// ---------------------------------------------------------------------------
+// Projects
+// ---------------------------------------------------------------------------
+
+export const pratinidhi = {
+  number: '01',
+  name: 'PRATINIDHI AI',
+  subtitle: 'AI AGENT × CRM × AUTOMATION',
+  role: 'SOFTWARE ENGINEER / FULL-STACK ENGINEERING CONTRIBUTOR',
+  problem: 'Local and growing businesses were fielding customer conversations across five different channels with no unified way to qualify, route or follow up on a lead.',
+  built: 'A web dashboard for managing conversation pipelines and CRM stages in React.js, plus a modular backend (controllers / services / repositories) covering intake, qualification, routing and lifecycle tracking of customer interactions — with automation workflow triggers and structured logging for production observability.',
+  channels: ['WhatsApp', 'Telegram', 'Instagram', 'Email', 'Voice'],
+  agentSteps: ['Intent', 'State', 'Lead Stage', 'Transitions', 'Follow-up', 'Escalation'],
+  ragSteps: ['RAG', 'Knowledge', 'Semantic Search'],
+  outcome: 'CRM Actions',
+  metric: '317K+',
+  metricLabel: 'leads moved through the platform\'s workflows',
+  channelCount: '5',
+  channelLabel: 'communication channels unified into one pipeline',
+  tech: ['React.js', 'JavaScript', 'REST APIs', 'Webhooks', 'RAG', 'Embeddings', 'Semantic Search', 'LLM APIs'],
+  screenshot: asset('desktop_img.jpeg'),
+  screenshotAlt: 'Pratinidhi AI product dashboard',
+}
+
+export const educado = {
+  number: '02',
+  name: 'EDUCADO AI',
+  subtitle: 'AI TUTOR × LEARNING × BACKEND',
+  role: 'PRIMARY BACKEND ENGINEER, NEAR-SOLE OWNERSHIP',
+  problem: 'Students preparing for the SAT and NISM needed a way to predict their score, get tutored through weak spots, and track progress — without a human on the other end.',
+  built: 'The full backend on FastAPI, Firebase Auth, Firestore, Redis and OpenAI APIs with async background workers, designed for low-latency reads and eventual-consistency writes at scale.',
+  flows: [
+    {
+      title: 'Score Predictor',
+      body: 'Exam-aware question assembly, rule-based scoring with negative marking, pass-probability computation, async persistence of predictor history with profile score sync.',
+    },
+    {
+      title: 'AI Tutor',
+      body: 'Subscription-gated sessions, dynamic prompt orchestration, optional RAG retrieval via LangChain + FAISS + OpenAI embeddings, responses on gpt-4o-mini, session summarization with persistence.',
+    },
+    {
+      title: 'Analytics',
+      body: 'Async ingestion of quiz and predictor events into hierarchical aggregates, daily activity logs, strength/weakness detection, personalized insights.',
+    },
+    {
+      title: 'Full-Length Test',
+      body: 'Blueprint-driven mock generation, randomized question/option ordering, score & topic breakdown, attempt history, entitlement-aware trial gating.',
+    },
+  ],
+  bookFlow: ['Question', 'AI Tutor', 'RAG', 'Exam Knowledge', 'Contextual Answer'],
+  metric: '60+',
+  metricLabel: 'APIs built and shipped',
+  categories: ['AI Tutoring', 'Assessments', 'Learner Progress', 'Analytics', 'Subscriptions'],
+  tech: ['Python', 'FastAPI', 'Firebase Auth', 'Firestore', 'Redis', 'RAG', 'FAISS', 'LangChain', 'OpenAI'],
+  screenshot: asset('phone_img.jpeg'),
+  screenshotAlt: 'Educado AI mobile app',
+}
+
+// ---------------------------------------------------------------------------
+// The rest
+// ---------------------------------------------------------------------------
+
+export const doesntFit = [
+  'I LIKE IDEAS.',
+  'I LIKE MAKING THINGS.',
+  'I LIKE FIGURING THINGS OUT.',
+  'I LIKE EXPLAINING COMPLICATED THINGS SIMPLY.',
+  'I LEARN BY DOING.',
+  'I SAY YES TO INTERESTING PROBLEMS.',
+]
+
+export const soIEndedUp = [
+  'ENGINEERING', 'IDEATION', 'CONTENT', 'PRODUCT THINKING',
+  'FOUNDERS', 'CUSTOMER-SIDE PROBLEM SOLVING', 'AI EDUCATION', 'LEARNING',
+]
+
+export const toolbox = {
+  ai: ['AI Agents', 'RAG', 'Embeddings', 'Semantic Search', 'FAISS', 'LangChain', 'Prompt Engineering', 'Function Calling', 'OpenAI APIs'],
+  backend: ['Python', 'FastAPI', 'REST APIs', 'JWT Auth', 'Microservices', 'Firebase', 'Firestore', 'Redis', 'MongoDB', 'SQL'],
+  frontend: ['React.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Flutter'],
+  testing: ['Postman', 'JIRA', 'TestRail', 'Git', 'Docker', 'CI/CD'],
+}
+
+export const certifications = [
+  { name: 'ReactJS Course', org: 'Scaler', year: '2024' },
+  { name: 'JavaScript Course', org: 'Scaler', year: '2024' },
+  { name: 'Google Drive Clone Bootcamp', org: 'DevTown × Google Developer Student Clubs', year: '2023' },
+]
+
+export const otherWork = {
+  aiSessions: 'AI awareness sessions run for Pratinidhi AI cohorts.',
+  volunteer: 'Volunteer engineer — technology solution work for a nonprofit organization.',
+}
+
+export const currently = {
+  year: '2026',
+  heading: 'WHERE I AM NOW',
+  role: 'SOFTWARE ENGINEER',
+  focus: 'AI × PRODUCT × BUILDING',
+  body: 'Building AI-powered products. Learning constantly. Still saying yes to interesting problems. Still figuring out what\'s next.',
+}
+
+export const finalSection = {
+  heading: 'TO BE CONTINUED…',
+  body: "I don't know exactly what's next. That's kind of the point.",
+  cta: "LET'S BUILD SOMETHING.",
+}
