@@ -27,10 +27,10 @@ function InternshipCertificate() {
       whileInView={{ opacity: 1, y: 0, rotate: -2 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-      className="relative mx-auto w-full max-w-[480px] border-[14px] border-paper bg-paper p-3 shadow-[0_24px_48px_-20px_rgba(20,18,12,0.5)]"
+      className="relative mx-auto w-full max-w-[480px] shadow-[0_24px_48px_-20px_rgba(20,18,12,0.5)]"
     >
-      <div className="aspect-[3/4] overflow-hidden bg-white">
-        <img src={asset('journey-saksoft-certificate.png')} alt="Saksoft 360Logica Internship Certificate" className="h-full w-full object-cover" style={{ objectPosition: 'center 25%' }} loading="lazy" />
+      <div className="aspect-[1.4/1] overflow-hidden bg-white">
+        <img src={asset('journey-saksoft-certificate.png')} alt="Saksoft 360Logica Internship Certificate" className="h-full w-full object-cover" style={{ objectPosition: 'center 15%' }} loading="lazy" />
       </div>
       <figcaption className="font-script mt-3 text-center text-[18px] leading-none text-ink/65">
         turning how things break into how to build them better ♡
