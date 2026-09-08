@@ -4,7 +4,6 @@ import {
 } from '@/data/content'
 import { SchoolChapterBlock } from './SchoolChapter'
 import { CollegeChapterBlock } from './CollegeChapter'
-import { InternshipChapterBlock } from './InternshipChapter'
 import { OrchestrixChapterBlock } from './OrchestrixChapter'
 
 function TimelineLine() {
@@ -43,8 +42,6 @@ export function JourneyTimeline() {
           <SchoolChapterBlock />
 
           <CollegeChapterBlock />
-
-          <InternshipChapterBlock />
 
           <OrchestrixChapterBlock />
         </div>

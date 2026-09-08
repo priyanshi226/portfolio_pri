@@ -49,8 +49,8 @@ export function PratinidhiCase() {
             </div>
             <div className="relative z-20 mx-auto mt-5 grid max-w-[720px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:mx-0">
               {notes.map((note, index) => (
-                <motion.article key={note.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.45, delay: 0.2 + index * 0.08 }} className={`relative aspect-square px-4 py-4 shadow-[4px_8px_16px_rgba(0,0,0,0.22)] sm:px-4 sm:py-4 ${note.className} ${index % 2 === 1 ? 'sm:translate-y-2 lg:translate-y-1' : ''}`}>
-                  <span aria-hidden="true" className="absolute -top-2 left-1/2 h-3 w-12 -translate-x-1/2 bg-paper/40" />
+                <motion.article key={note.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.45, delay: 0.2 + index * 0.08 }} className={`relative px-4 py-4 shadow-[4px_8px_16px_rgba(0,0,0,0.22)] sm:aspect-square sm:px-4 sm:py-4 ${note.className} ${index % 2 === 1 ? 'sm:translate-y-2 lg:translate-y-1' : ''}`}>
+                  <span aria-hidden="true" className="absolute -top-2 left-1/2 h-3 w-12 -translate-x-1/2 bg-white/70" />
                   <h3 className="border-b border-ink/30 pb-1.5 font-script text-[18px] leading-[1.05]">{note.title}</h3>
                   <ul className="mt-3 space-y-2 text-[10px] leading-[1.35] text-ink/75">
                     {note.points.map((point) => <li key={point} className="flex gap-1.5"><span className="mt-[0.15em] text-[12px] leading-none">✓</span><span>{point}</span></li>)}

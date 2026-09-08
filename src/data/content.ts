@@ -85,20 +85,6 @@ export const photomathChapter = {
   note: 'apparently explaining things counts as a skill',
 }
 
-export const qaChapter = {
-  years: 'June 2024 — August 2024',
-  kicker: 'THE "LET\'S BREAK THINGS" ERA',
-  company: '360LOGICA / SAKSOFT',
-  role: 'QUALITY ASSURANCE INTERN',
-  body: 'Two months of learning how software breaks before spending most of my time figuring out how to build it.',
-  points: [
-    'Exploratory & functional testing across web and AI-based applications',
-    'API testing and contract validation with Postman',
-    'Defect triage and lifecycle management in JIRA & TestRail',
-    'Evaluated chatbot / LLM outputs across varied prompt sets',
-  ],
-}
-
 // ---------------------------------------------------------------------------
 // Projects
 // ---------------------------------------------------------------------------
@@ -161,19 +147,71 @@ export const educado = {
 // The rest
 // ---------------------------------------------------------------------------
 
-export const doesntFit = [
-  'I LIKE IDEAS.',
-  'I LIKE MAKING THINGS.',
-  'I LIKE FIGURING THINGS OUT.',
-  'I LIKE EXPLAINING COMPLICATED THINGS SIMPLY.',
-  'I LEARN BY DOING.',
-  'I SAY YES TO INTERESTING PROBLEMS.',
-]
-
-export const soIEndedUp = [
-  'ENGINEERING', 'IDEATION', 'CONTENT', 'PRODUCT THINKING',
-  'FOUNDERS', 'CUSTOMER-SIDE PROBLEM SOLVING', 'AI EDUCATION', 'LEARNING',
-]
+export const beyondResume = {
+  eyebrow: "the bits that don't quite fit on a resume",
+  heading: 'Beyond the Job Description',
+  intro:
+    "Not everything I've learned or worked on fits neatly under a job title. Some of the most useful experiences came from teaching, working closely with founders, helping teams, and simply saying yes to interesting problems.",
+  cards: [
+    {
+      title: 'Certifications',
+      body: "Anthropic Claude 101, Anthropic AI Fluency, and Scaler's ReactJS and JavaScript courses — formal grounding alongside the hands-on work.",
+      note: 'always learning',
+      icon: 'graduationCap',
+      tone: 'yellow',
+      rotate: '-rotate-1',
+      span: 'lg:col-span-2',
+      proofHref: 'https://www.instagram.com/educado_ai_sat?stkn=dXgzdjRicWs3cmZv',
+    },
+    {
+      title: 'Photomath',
+      body: 'As a Math Expert on Photomath, I guided 100+ students through problem-solving and concept clarification, one clear step at a time.',
+      note: 'explaining > assuming',
+      icon: 'calculator',
+      tone: 'blush',
+      rotate: 'rotate-1',
+      span: 'lg:col-span-2',
+      proofHref: 'https://drive.google.com/drive/folders/13RfmrnviY2Ae43XrT3h5TzhrS8AhpGwE',
+    },
+    {
+      title: "Founders' Office",
+      body: "Alongside engineering at Orchestrix, I've worked closely with the founders' office — contributing to content, sales operations, and coordinating with the sales and customer success teams.",
+      note: 'beyond just code',
+      icon: 'users',
+      tone: 'lavender',
+      rotate: '-rotate-1',
+      span: 'lg:col-span-2',
+    },
+    {
+      title: 'Pratinidhi AI Cohorts',
+      body: 'Conducted AI awareness sessions for Pratinidhi AI cohorts, helping non-technical participants get comfortable with LLMs, AI assistants, and workflow automation.',
+      note: 'making AI less intimidating',
+      icon: 'presentation',
+      tone: 'pink',
+      rotate: 'rotate-1',
+      span: 'lg:col-span-2',
+    },
+    {
+      title: 'QA Internship',
+      body: 'Two months at 360Logica (a SAKSOFT company) testing web and AI-based products — exploratory and API testing, defect triage in JIRA and TestRail, and evaluating chatbot responses across varied prompts.',
+      note: 'breaking things to learn how to build them',
+      icon: 'bug',
+      tone: 'sage',
+      rotate: '-rotate-1',
+      span: 'lg:col-span-2',
+      proofHref: 'https://drive.google.com/file/d/1yAL9KB4smEyCrswQvk_-WzgBIwz6Hb3c/view?usp=sharing',
+    },
+    {
+      title: 'Volunteering',
+      body: 'Volunteer Engineer — built a technology solution for a nonprofit, putting engineering skills toward a cause outside work and academics.',
+      note: 'small steps matter',
+      icon: 'heart',
+      tone: 'cream',
+      rotate: 'rotate-1',
+      span: 'lg:col-span-2',
+    },
+  ],
+}
 
 export const toolbox = {
   ai: ['AI Agents', 'RAG', 'Embeddings', 'Semantic Search', 'FAISS', 'LangChain', 'Prompt Engineering', 'Function Calling', 'OpenAI APIs'],
@@ -202,7 +240,6 @@ export const currently = {
 }
 
 export const finalSection = {
-  heading: 'TO BE CONTINUED…',
-  body: "I don't know exactly what's next. That's kind of the point.",
-  cta: "LET'S BUILD SOMETHING.",
+  heading: "Let's talk.",
+  body: "Have an idea, a project, or just want to say hello? I'd love to hear from you.",
 }

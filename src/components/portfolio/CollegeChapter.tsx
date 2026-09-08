@@ -5,7 +5,7 @@ function TapeStrip({ className }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none absolute h-6 w-16 border border-white/40 bg-paper/65 shadow-sm ${className ?? ''}`}
+      className={`pointer-events-none absolute h-6 w-16 border border-white/40 bg-white/75 shadow-sm ${className ?? ''}`}
     />
   )
 }
@@ -21,7 +21,7 @@ function HighlightCard({
 }) {
   return (
     <div className={`relative min-h-[132px] border border-ink/15 px-4 py-5 shadow-[0_12px_22px_-16px_rgba(20,18,12,0.6)] ${className}`}>
-      <TapeStrip className="-top-3 left-1/2 -ml-8 bg-lilac/55" />
+      <TapeStrip className="-top-3 left-1/2 -ml-8 bg-white/80" />
       <p className="font-script text-[22px] leading-none text-ink">{title}</p>
       <p className="mt-3 text-[12px] leading-snug text-ink/65">{children}</p>
     </div>
@@ -56,7 +56,7 @@ export function CollegeChapterBlock() {
           viewport={{ once: true, amount: 0.3 }}
           className="min-w-0 lg:pr-3"
         >
-          <p className="inline-flex rounded-full bg-lilac/35 px-4 py-0.5 text-[13px] font-semibold tracking-[0.14em] text-ink/65">
+          <p className="inline-flex rounded-full bg-white/80 px-4 py-0.5 text-[13px] font-semibold tracking-[0.14em] text-ink/65">
             {collegeChapter.years}
           </p>
           <p className="eyebrow mt-4 text-ink/60">{collegeChapter.kicker}</p>
@@ -67,7 +67,7 @@ export function CollegeChapterBlock() {
             {collegeChapter.degree}
           </p>
           <p className="mt-4 flex items-center gap-2">
-            <span className="font-serif text-[37px] leading-none text-lavender-deep sm:text-[43px]">{collegeChapter.stat}</span>
+            <span className="font-serif text-[28px] leading-none text-lavender-deep sm:text-[32px]">{collegeChapter.stat}</span>
             <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/55">{collegeChapter.statLabel}</span>
           </p>
 
@@ -78,7 +78,7 @@ export function CollegeChapterBlock() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative mt-6 ml-3 w-[88%] max-w-[380px] border-[10px] border-paper bg-paper pb-10 shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] sm:ml-8"
           >
-            <TapeStrip className="-top-5 left-1/2 -ml-8 bg-lilac/65" />
+            <TapeStrip className="-top-5 left-1/2 -ml-8 bg-white/80" />
             <img src={asset('journey-college.png')} alt="Priyanshi Gupta at college convocation" className="aspect-[9/10] w-full object-cover" style={{ objectPosition: 'center 46%' }} />
             <figcaption className="font-script absolute bottom-2 right-3 text-[18px] leading-none text-ink/65">
               grateful for this chapter ♡
@@ -93,7 +93,7 @@ export function CollegeChapterBlock() {
           className="min-w-0 lg:pl-3"
         >
           <div className="relative bg-paper/85 px-6 py-6 shadow-[0_18px_32px_-24px_rgba(20,18,12,0.55)] sm:px-8 sm:py-7">
-            <TapeStrip className="-top-3 left-1/2 -ml-8 bg-lilac/55" />
+            <TapeStrip className="-top-3 left-1/2 -ml-8 bg-white/80" />
             <p className="border-b border-lavender-deep/60 pb-2 font-script text-[31px] leading-none text-ink sm:text-[35px]">
               My college journey
             </p>

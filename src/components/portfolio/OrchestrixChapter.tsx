@@ -5,7 +5,7 @@ function TapeStrip({ className }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none absolute h-6 w-14 border border-white/40 bg-paper/65 shadow-sm ${className ?? ''}`}
+      className={`pointer-events-none absolute h-6 w-14 border border-white/40 bg-white/75 shadow-sm ${className ?? ''}`}
     />
   )
 }
@@ -40,7 +40,7 @@ function StickyNote({
       transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
       className={`relative border border-ink/10 px-3.5 py-3 shadow-[0_10px_18px_-12px_rgba(20,18,12,0.55)] ${noteTones[tone]} ${rotate}`}
     >
-      <TapeStrip className="-top-2.5 left-1/2 -ml-7 bg-lilac/50" />
+      <TapeStrip className="-top-2.5 left-1/2 -ml-7 bg-white/80" />
       <p className="font-script text-[16px] leading-none text-ink underline decoration-ink/25 underline-offset-4">
         {title}
       </p>
@@ -76,7 +76,7 @@ export function OrchestrixChapterBlock() {
           transition={{ duration: 0.6 }}
           className="lg:col-start-2 lg:row-start-1"
         >
-          <p className="inline-flex rounded-full bg-lilac/35 px-4 py-0.5 text-[13px] font-semibold tracking-[0.1em] text-ink/65">
+          <p className="inline-flex rounded-full bg-white/80 px-4 py-0.5 text-[13px] font-semibold tracking-[0.1em] text-ink/65">
             May 2025 — Present
           </p>
           <p className="eyebrow mt-3 text-ink/50">Current chapter</p>
@@ -98,7 +98,7 @@ export function OrchestrixChapterBlock() {
               transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="relative mx-auto w-full max-w-[360px] border-[10px] border-paper bg-paper shadow-[0_20px_38px_-18px_rgba(20,18,12,0.55)] lg:mx-0 lg:max-w-none"
             >
-              <TapeStrip className="-top-4 left-1/2 -ml-7 bg-lilac/65" />
+              <TapeStrip className="-top-4 left-1/2 -ml-7 bg-white/80" />
               <img
                 src={asset('journey-orchestrix.png')}
                 alt="A software engineering workspace with notebook and phone"

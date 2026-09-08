@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { BarChart3, BookOpen, CreditCard, Layers3 } from 'lucide-react'
-import { educado } from '@/data/content'
+import { asset, educado } from '@/data/content'
 
 const features = [
   { icon: BookOpen, title: 'AI Tutor with RAG', body: 'LLM-powered tutor using RAG, document chunking, FAISS, LangChain and OpenAI.' },
@@ -12,11 +12,11 @@ const features = [
 const notes = [
   { text: 'AI tutoring for real progress', className: '-left-16 top-0 -rotate-[4deg] bg-[#e6def7]' },
   { text: 'NISM + SAT made simpler', className: '-left-10 bottom-0 rotate-[3deg] bg-[#f6dfaa]' },
-  { text: 'Personalized practice & progress', className: '-right-12 top-8 rotate-[2deg] bg-[#f2d4d8]' },
-  { text: 'Instant explanations, anytime', className: '-right-16 bottom-6 -rotate-[3deg] bg-[#dfd7f2]' },
+  { text: 'Personalized practice & progress', className: '-right-16 top-8 rotate-[2deg] bg-[#f2d4d8] sm:-right-20 lg:-right-24' },
+  { text: 'Instant explanations, anytime', className: '-right-20 bottom-6 -rotate-[3deg] bg-[#dfd7f2] sm:-right-24 lg:-right-28' },
 ]
 
-function PhoneFrame({ front, sizeClass }: { front?: boolean; sizeClass: string }) {
+function PhoneFrame({ front, src, alt, sizeClass }: { front?: boolean; src: string; alt: string; sizeClass: string }) {
   return (
     <div
       className={`relative aspect-[738/1600] overflow-hidden rounded-[1.5rem] border-[4px] border-[#1e1d1b] bg-white shadow-[0_18px_30px_-14px_rgba(28,24,17,0.5)] sm:rounded-[1.9rem] sm:border-[5px] lg:rounded-[2.1rem] ${sizeClass} ${
@@ -29,12 +29,7 @@ function PhoneFrame({ front, sizeClass }: { front?: boolean; sizeClass: string }
           className="absolute left-1/2 top-1.5 z-10 h-[13px] w-[58px] -translate-x-1/2 rounded-full bg-[#1e1d1b] sm:h-[16px] sm:w-[70px]"
         />
       )}
-      <img
-        src={educado.screenshot}
-        alt="Educado AI app screen"
-        className="h-full w-full object-cover object-top"
-        loading="lazy"
-      />
+      <img src={src} alt={alt} className="h-full w-full object-cover object-top" loading="lazy" />
     </div>
   )
 }
@@ -68,7 +63,11 @@ export function EducadoCase() {
                 transition={{ duration: 0.7 }}
                 className="absolute left-5 top-7 z-10 sm:left-6 sm:top-8 lg:left-7 lg:top-8"
               >
-                <PhoneFrame sizeClass="w-[120px] sm:w-[150px] lg:w-[180px]" />
+                <PhoneFrame
+                  src={asset('educado-improve-me.png')}
+                  alt="Educado AI performance summary and topic breakdown screen"
+                  sizeClass="w-[120px] sm:w-[150px] lg:w-[180px]"
+                />
               </motion.div>
 
               <motion.div
@@ -76,9 +75,14 @@ export function EducadoCase() {
                 whileInView={{ opacity: 1, x: 0, rotate: 5 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7, delay: 0.12 }}
-                className="absolute bottom-0 right-0 z-20"
+                className="absolute -right-6 bottom-0 z-20 sm:-right-8 lg:-right-10"
               >
-                <PhoneFrame front sizeClass="w-[150px] sm:w-[185px] lg:w-[220px]" />
+                <PhoneFrame
+                  front
+                  src={educado.screenshot}
+                  alt="Educado AI SAT score prediction screen"
+                  sizeClass="w-[150px] sm:w-[185px] lg:w-[220px]"
+                />
               </motion.div>
             </div>
           </motion.div>

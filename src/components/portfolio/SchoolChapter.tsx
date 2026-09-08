@@ -6,7 +6,7 @@ function TapeStrip({ className }: { className?: string }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none absolute h-6 w-16 border border-white/40 bg-paper/60 shadow-sm ${className ?? ''}`}
+      className={`pointer-events-none absolute h-6 w-16 border border-white/40 bg-white/75 shadow-sm ${className ?? ''}`}
     />
   )
 }
@@ -38,7 +38,7 @@ export function SchoolChapterBlock() {
             initial={fadeIn.hidden}
             whileInView={fadeIn.show(0)}
             viewport={{ once: true, amount: 0.4 }}
-            className="inline-flex rounded-full bg-lilac/35 px-4 py-0.5 text-[13px] font-semibold tracking-[0.14em] text-ink/65"
+            className="inline-flex rounded-full bg-white/80 px-4 py-0.5 text-[13px] font-semibold tracking-[0.14em] text-ink/65"
           >
             {schoolChapter.years}
           </motion.p>
@@ -108,7 +108,7 @@ export function SchoolChapterBlock() {
             transition={{ duration: 0.7, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-0 mr-auto w-[78%] max-w-[342px] border-4 border-paper bg-paper p-1 shadow-[0_18px_36px_-16px_rgba(20,18,12,0.45)] sm:ml-5"
           >
-            <TapeStrip className="-top-4 left-1/2 -ml-8 -rotate-3 bg-lilac/65" />
+            <TapeStrip className="-top-4 left-1/2 -ml-8 -rotate-3 bg-white/80" />
             <div className="aspect-[4/3] overflow-hidden">
               <img src={asset('journey-school.png')} alt="S.D. Public School" className="h-full w-full object-cover" loading="lazy" />
             </div>
@@ -140,7 +140,7 @@ export function SchoolChapterBlock() {
             transition={{ duration: 0.5, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-10 mt-8 w-[92%] max-w-[350px] bg-paper/80 p-5 shadow-[0_14px_26px_-14px_rgba(20,18,12,0.45)] sm:ml-5"
           >
-            <TapeStrip className="-top-3 right-9 -rotate-6 bg-lilac/65" />
+            <TapeStrip className="-top-3 right-9 -rotate-6 bg-white/80" />
             <div className="flex items-center gap-2">
               <MedalDoodle className="h-11 w-8 text-mustard" />
               <p className="border-b border-lavender-deep/65 pb-1 font-script text-[24px] leading-none text-ink">{schoolChapter.olympiad.heading}</p>
