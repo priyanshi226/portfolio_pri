@@ -161,6 +161,7 @@ export const beyondResume = {
       tone: 'yellow',
       rotate: '-rotate-1',
       span: 'lg:col-span-2',
+      proofHref: 'https://drive.google.com/drive/folders/13RfmrnviY2Ae43XrT3h5TzhrS8AhpGwE',
     },
     {
       title: 'Photomath',
@@ -170,7 +171,7 @@ export const beyondResume = {
       tone: 'blush',
       rotate: 'rotate-1',
       span: 'lg:col-span-2',
-      proofHref: 'https://drive.google.com/drive/folders/13RfmrnviY2Ae43XrT3h5TzhrS8AhpGwE',
+      proofHref: 'https://drive.google.com/file/d/1lJV8MDuHSg7X37CxBn7i_o-aiRSruKKu/view?usp=sharing',
     },
     {
       title: "Founders' Office",

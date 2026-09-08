@@ -20,8 +20,8 @@ const c = {
 function App() {
   return (
     <MotionConfig reducedMotion="user">
+      <Header />
       <PageFrame>
-        <Header />
         <Hero />
         <WavyDivider topColor={c.olive} bottomColor={c.paper} />
         <MeetSection />
